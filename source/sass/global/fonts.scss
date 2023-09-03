@@ -1,8 +1,29 @@
 @font-face {
   font-style: normal;
-  font-weight: 400;
-  font-family: "";
-
+  font-weight: 500;
+  font-family: "Manrope Medium";
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2");
+  src:
+    url("../fonts/Manrope-Medium.woff2"),
+    url("../fonts/Manrope-Medium.woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Manrope Regular";
+  font-display: swap;
+  src:
+    url("../fonts/Manrope-Regular.woff2"),
+    url("../fonts/Manrope-Regular.woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 300;
+  font-family: "Manrope Light";
+  font-display: swap;
+  src:
+    url("../fonts/Manrope-Light.woff2") format("woff2"),
+    url("../fonts/Manrope-Light.woff") format("woff");
 }
