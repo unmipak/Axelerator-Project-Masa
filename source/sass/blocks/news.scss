@@ -1,0 +1,8 @@
+.news {
+  padding: 120px 100px;
+
+  h2 {
+    @include text-h2;
+    text-align: center;
+  }
+}

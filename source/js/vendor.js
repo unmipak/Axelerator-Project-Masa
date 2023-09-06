@@ -13,4 +13,18 @@ const sliderHero = new Swiper('.hero', {
   },
 });
 
-export {sliderHero};
+const sliderPrograms = new Swiper('.programs__slider', {
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 32,
+  navigation: {
+    prevEl: '.programs__btn-prev',
+    nextEl: '.programs__btn-next',
+  },
+  pagination: {
+    el: '.programs__pagination',
+    type: 'progressbar',
+  },
+});
+
+export {sliderHero, sliderPrograms};

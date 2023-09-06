@@ -1,0 +1,20 @@
+.feedback {
+  padding: 120px 100px 60px;
+
+  h3 {
+    @include text-h3--white;
+  }
+
+  p {
+    @include text-regular--white;
+  }
+}
+
+.feedback__wrapper {
+  background-color: $color-cerulean-blue;
+  background-image: url("../img/feedback-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  border-radius: 16px;
+}

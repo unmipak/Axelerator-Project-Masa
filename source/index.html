@@ -85,8 +85,10 @@
           <div class="hero__pagination swiper-pagination"></div>
         </section>
         <section class="about-us" id="about-us">
-          <h2 data-title="Ближайшие туры">О проекте «Маса»</h2>
-          <p>«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут.</p>
+          <div class="about-us__header-wrapper">
+            <h2 data-title="Ближайшие туры">О проекте «Маса»</h2>
+            <p>«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут.</p>
+          </div>
           <div class="about-us__wrapper">
             <h3>Наша цель</h3>
             <p>Наша деятельность направлена на повышение квалификации молодых специалистов на ранних и средних стадиях
@@ -109,7 +111,7 @@
               <dd>грант всем участникам для комфортного прохождения программы</dd>
             </div>
             <div class="advantages-list__item">
-              <dt>участники из 60 стран</dt>
+              <dt>Участники из 60 стран</dt>
               <dd>студенты со всего мира приезжают на программу «Маса»</dd>
             </div>
           </dl>
@@ -118,10 +120,6 @@
           <h2 data-title="Обучение">Программы</h2>
           <a class="programs__btn btn" href="#">Подробнее</a>
           <div class="programs__slider swiper">
-            <div class="programs__btn-wrapper">
-              <button class="programs__btn-prev swiper-button-prev" type="button" aria-label="Назад"></button>
-              <button class="programs__btn-next swiper-button-next" type="button" aria-label="Вперед"></button>
-            </div>
             <div class="swiper-wrapper">
               <div class="programs__slide programs__slide--internship #internship swiper-slide">
                 <picture>
@@ -140,7 +138,7 @@
                 <div class="programs__wrapper">
                   <h3>Стажировки</h3>
                   <p>Получите незаменимый опыт работы в крупнейших израильских компаниях.</p>
-                  <a class="programs__btn btn" href="#" aria-label="Подробнее"></a>
+                  <a class="programs__btn" href="#" aria-label="Подробнее"></a>
                 </div>
               </div>
               <div class="programs__slide programs__slide--volunteering #volunteering swiper-slide">
@@ -160,7 +158,7 @@
                 <div class="programs__wrapper">
                   <h3>Волонтёрство</h3>
                   <p>Помогайте другим и развивайте свои лидерские качества.</p>
-                  <a class="programs__btn btn" href="#" aria-label="Подробнее"></a>
+                  <a class="programs__btn" href="#" aria-label="Подробнее"></a>
                 </div>
               </div>
               <div class="programs__slide programs__slide--studying #studying swiper-slide">
@@ -180,7 +178,7 @@
                 <div class="programs__wrapper">
                   <h3>Учёба</h3>
                   <p>Получите образование и измените свое будущее.</p>
-                  <a class="programs__btn btn" href="#" aria-label="Подробнее"></a>
+                  <a class="programs__btn" href="#" aria-label="Подробнее"></a>
                 </div>
               </div>
               <div class="programs__slide programs__slide--religion #religion swiper-slide">
@@ -189,8 +187,15 @@
                 <div class="programs__wrapper">
                   <h3>Религия</h3>
                   <p>Познакомьтесь с религией.</p>
-                  <a class="programs__btn btn" href="#" aria-label="Подробнее"></a>
+                  <a class="programs__btn" href="#" aria-label="Подробнее"></a>
                 </div>
+              </div>
+            </div>
+            <div class="programs__navigation-container">
+              <div class="programs__pagination swiper-pagination"></div>
+              <div class="programs__btn-wrapper">
+                <button class="programs__btn--prev swiper-button-prev" type="button" aria-label="Назад"></button>
+                <button class="programs__btn--next swiper-button-next" type="button" aria-label="Вперед"></button>
               </div>
             </div>
           </div>
@@ -200,9 +205,8 @@
           <p>Свяжитесь с координатором, чтобы узнать полную информацию. Вы получите актуальные сведения о доступных
             программах и городах, в которых можете пройти программу.</p>
           <picture>
-            <source type="image/webp" srcset="./img/background-rules.webp, ./img/background-rules@2x.webp 2x">
-            <img class="rules__picture" src="./img/background-rules.jpg" width="870" height="580"
-              srcset="./img/background-rules@2x.jpg 2x" alt="Фото Израиля">
+            <source type="image/webp" srcset="./img/background-rules.webp">
+            <img class="rules__picture" src="./img/background-rules.jpg" width="870" height="580" alt="Фото Израиля">
           </picture>
           <h3>Чтобы получить грант на обучение, вам нужно:</h3>
           <ol class="rules__list">
@@ -387,9 +391,9 @@
           </div>
         </section>
         <section class="feedback">
-          <h3>Напишите нам</h3>
-          <p>Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
           <div class="feedback__wrapper" data-form-validate data-callback="base">
+            <h3>Напишите нам</h3>
+            <p>Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
             <form action="https://echo.htmlacademy.ru/" method="post">
               <div class="custom-input" data-validate-type="text" data-limitation="name" data-required>
                 <label for="name">Имя</label>

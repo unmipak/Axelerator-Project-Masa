@@ -1,0 +1,31 @@
+.advantages-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: $color-cerulean-blue;
+  border-radius: 30px;
+  padding: 70px 106px;
+  column-gap: 52px;
+  row-gap: 54px;
+
+}
+
+.advantages-list__item {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+  align-items: center;
+  padding: 30px 60px;
+  border: 1px solid $color-alabaster;
+  border-radius: 16px;
+
+  dt {
+    @include text-regular--white;
+    text-transform: uppercase;
+    max-width: 171px
+  }
+
+  dd {
+    @include text-small--white;
+    max-width: 190px;
+  }
+}

@@ -1,0 +1,46 @@
+.about-us {
+  padding: 120px 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 159px;
+}
+
+.about-us__header-wrapper {
+  max-width: 35%;
+
+  h2 {
+    @include text-h2;
+    padding-bottom: 30px;
+  }
+
+  p {
+    @include text-big;
+  }
+}
+
+.about-us__wrapper {
+  max-width: 40%;
+
+  h3 {
+    @include text-h3;
+    padding-bottom: 40px;
+  }
+
+  p {
+    @include text-regular;
+    padding-bottom: 40px;
+  }
+}
+
+.about-us__btn {
+  margin-bottom: 60px;
+}
+
+.about-us__advantages {
+  margin: 0;
+  width: 100%;
+}
+
+

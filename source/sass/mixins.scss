@@ -276,45 +276,49 @@
   }
 }
 
-// Mobile first
+@mixin pagination-prev {
+  border: none;
+  background-color: transparent;
+  position: relative;
+  right: auto;
+  left: auto;
+  top: auto;
+  width: 22px;
+  height: 22px;
+  margin: 0;
 
-// @mixin vp-375 {
-//   @media (min-width: $vp-375) {
-//     @content;
-//   }
-// }
+  &::after {
+    content: "";
+    background-image: url("../img/stack.svg#arrow-blue");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    transform: rotate(225deg);
+    width: 10px;
+    height: 10px;
+  }
 
-// @mixin vp-768 {
-//   @media (min-width: $vp-768) {
-//     @content;
-//   }
-// }
+}
 
-// @mixin vp-1024 {
-//   @media (min-width: $vp-1024) {
-//     @content;
-//   }
-// }
+@mixin pagination-next {
+  border: none;
+  background-color: transparent;
+  position: relative;
+  right: auto;
+  left: auto;
+  top: auto;
+  width: 22px;
+  height: 22px;
+  margin: 0;
 
-// @mixin vp-1280 {
-//   @media (min-width: $vp-1280) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1440 {
-//   @media (min-width: $vp-1440) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1920 {
-//   @media (min-width: $vp-1920) {
-//     @content;
-//   }
-// }
-
-// ---------------------------------
-
-// не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие
-// этим вы усложняете работу команды, проверку вашего кода и будущую поддержку проекта
+  &::after {
+    content: "";
+    background-image: url("../img/stack.svg#arrow-blue");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+  }
+}
