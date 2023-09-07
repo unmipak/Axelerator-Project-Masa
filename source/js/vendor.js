@@ -18,8 +18,8 @@ const sliderPrograms = new Swiper('.programs__slider', {
   slidesPerView: 3,
   spaceBetween: 32,
   navigation: {
-    prevEl: '.programs__btn-prev',
-    nextEl: '.programs__btn-next',
+    prevEl: '.programs__btn--prev',
+    nextEl: '.programs__btn--next',
   },
   pagination: {
     el: '.programs__pagination',
@@ -27,4 +27,35 @@ const sliderPrograms = new Swiper('.programs__slider', {
   },
 });
 
-export {sliderHero, sliderPrograms};
+const sliderNews = new Swiper('.news__slider', {
+  loop: true,
+  slidesPerView: 'auto',
+  spaceBetween: 32,
+  navigation: {
+    prevEl: '.news__btn--prev',
+    nextEl: '.news__btn--next',
+  },
+  pagination: {
+    el: '.news__pagination',
+    clickable: true,
+    renderBullet(index, className) {
+      return '<span class="' + className + '">' + (index + 1) + '</span>';
+    },
+  },
+});
+
+const sliderReviews = new Swiper('.reviews__slider', {
+  loop: true,
+  slidesPerView: 2,
+  spaceBetween: 32,
+  navigation: {
+    prevEl: '.reviews__btn--prev',
+    nextEl: '.reviews__btn--next',
+  },
+  pagination: {
+    el: '.reviews__pagination',
+    type: 'progressbar',
+  },
+});
+
+export {sliderHero, sliderPrograms, sliderNews, sliderReviews};

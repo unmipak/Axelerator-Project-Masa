@@ -1,21 +1,13 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
-
-// ---------------------------------
+import {initAccordions} from './vendor/init-accordion';
+import {initTabs} from './vendor/init-tabs';
 
 window.addEventListener('DOMContentLoaded', () => {
 
-  // Utils
-  // ---------------------------------
-
   iosVhFix();
 
-  // Modules
-  // ---------------------------------
-
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
     const form = new Form();
@@ -24,27 +16,32 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// ---------------------------------
+// аккордеон
 
-// ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
+window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('load', () => {
+    initAccordions();
+  });
+});
 
-// привязывайте js не на классы, а на дата атрибуты (data-validate)
+// табы
 
-// вместо модификаторов .block--active используем утилитарные классы
-// .is-active || .is-open || .is-invalid и прочие (обязателен нейминг в два слова)
-// .select.select--opened ❌ ---> [data-select].is-open ✅
+//window.addEventListener('DOMContentLoaded', () => {
+  //window.addEventListener('load', () => {
+  //  initTabs();
+ // });
+//});
 
-// выносим все в дата атрибуты
-// url до иконок пинов карты, настройки автопрокрутки слайдера, url к json и т.д.
+// валидация формы
 
-// для адаптивного JS используется matchMedia и addListener
-// const breakpoint = window.matchMedia(`(min-width:1024px)`);
-// const breakpointChecker = () => {
-//   if (breakpoint.matches) {
-//   } else {
-//   }
-// };
-// breakpoint.addListener(breakpointChecker);
-// breakpointChecker();
+window.addEventListener('DOMContentLoaded', () => {
 
-// используйте .closest(el)
+  iosVhFix();
+
+  window.addEventListener('load', () => {
+    initModals();
+    const form = new Form();
+    window.form = form;
+    form.init();
+  });
+});

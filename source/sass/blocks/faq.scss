@@ -4,5 +4,87 @@
   h2 {
     @include text-h2;
     text-align: center;
+    padding-bottom: 60px;
+  }
+}
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+}
+
+.faq__item {
+  padding: 40px;
+  border: 1px solid $color-cerulean-blue;
+  border-radius: 16px;
+
+  dt {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    p {
+      @include text-h4;
+      max-width: 90%;
+      display: block;
+    }
+  }
+
+  dd {
+    margin: 0;
+    overflow: hidden;
+    p {
+      @include text-regular;
+      display: block;
+    }
+  }
+
+}
+
+.faq__btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: $color-cerulean-blue;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/stack.svg#plus");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+.faq__item.is-active {
+  background-color: $color-cerulean-blue;
+
+  dt {
+    p {
+      @include text-h4--white;
+    }
+  }
+
+  dd {
+    p {
+      @include text-regular--white;
+    }
+  }
+
+  .faq__btn {
+    background-color: $color-default-white;
+  }
+
+  .faq__btn::before {
+    background-image: url("../img/stack.svg#minus-blue");
   }
 }
