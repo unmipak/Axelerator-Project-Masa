@@ -1,0 +1,23 @@
+.site-navigation {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  width: 700px;
+
+  a {
+    @include text-regular;
+  }
+
+  a:hover,
+  a:focus-visible {
+    color: $color-cerulean-blue;
+  }
+
+  a:active {
+    color: $color-endeavour;
+  }
+}

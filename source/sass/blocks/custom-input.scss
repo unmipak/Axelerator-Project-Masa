@@ -1,111 +1,53 @@
 .custom-input,
 .custom-textarea {
   position: relative;
-
   display: flex;
-  width: 530px;
-  padding: 14px 0 28px;
-
-  @media screen and (max-width: 767px) {
-    padding: 4px 0 48px;
-    width: 100%;
-  }
+  flex-wrap: wrap;
+  row-gap: 12px;
 
   label {
-    display: flex;
-    align-items: center;
     width: 100%;
-
-    @media screen and (max-width: 767px) {
-      align-items: flex-start;
-      flex-direction: column;
-    }
-
-    input,
-    textarea {
-      flex-grow: 1;
-      max-width: 300px;
-      min-height: 48px;
-      margin-left: auto;
-      padding: 10px;
-
-      border: 2px solid rgba(#000000, 0.2);
-      border-radius: 5px;
-      outline: none;
-
-      transition: border 0.3s ease;
-
-      @media screen and (max-width: 767px) {
-        max-width: unset;
-        width: 100%;
-      }
-
-      &:hover {
-        border: 2px solid rgba(#000000, 0.5);
-      }
-
-      &:focus {
-        border: 2px solid rgba(#000000, 0.8);
-      }
-    }
+    font-family: $font-regular;
+    font-size: 14px;
+    line-height: 14px;
+    color: $color-alabaster;
   }
 
-  &__label {
-    @media screen and (max-width: 767px) {
-      margin: 0 0 18px 0;
-    }
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 17px 20px;
+    border: 1px solid $color-default-white;
+    border-radius: 8px;
+    background: none;
+    font-family: $font-regular;
+    font-size: 14px;
+    line-height: 14px;
+    color: $color-alabaster;
   }
 
-  &__error {
-    position: absolute;
-    right: 0;
-    bottom: 35px;
+  label[for=checkbox] {
+    width: 290px;
+    margin-left: 10px;
+  }
 
-    color: #ff1553;
-
-    opacity: 0;
-
-    transition: opacity 0.3s ease;
-
-    @media screen and (max-width: 767px) {
-      bottom: 20px;
-    }
+  input[type=checkbox] {
+    width: 20px;
+    min-height: 20px;
   }
 
   &.is-invalid {
+
     input,
     textarea {
-      border: 2px solid #ff1553;
+      border: 1px solid $color-wild-watermelon;
+      background: rgba(255, 94, 102, 0.20);
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
+        border: 1px solid $color-wild-watermelon;
       }
-    }
-  }
-
-  &.is-valid {
-    input {
-      border: 2px solid #22b259;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba(#22b259, 0.5);
-      }
-    }
-  }
-
-  .input-message {
-    position: absolute;
-    right: 0;
-    bottom: -5px;
-
-    &.is-invalid {
-      color: #ff0000;
-    }
-
-    &.is-valid {
-      color: #15ab07;
     }
   }
 }

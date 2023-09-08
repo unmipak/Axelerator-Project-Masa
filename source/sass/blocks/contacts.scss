@@ -45,8 +45,9 @@
 
 .contacts__map {
   width: 100%;
-  margin-top: 40px;
+  margin: 40px auto 0;
   position: relative;
+  border-radius: 16px;
 
   &::before {
     position: absolute;
@@ -57,5 +58,9 @@
     height: 2px;
     opacity: 0.2;
     background-color: $color-default-white;
+  }
+
+  iframe {
+    border-radius: 16px;
   }
 }

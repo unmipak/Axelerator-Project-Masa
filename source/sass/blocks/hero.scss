@@ -24,6 +24,21 @@
   border-radius: 0px 0px 30px 30px;
   padding: 0 50px 34px;
   width: 772px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 26px;
+    height: 26px;
+    right: 0;
+    top: 0;
+    transform: translateX(100%) rotate(90deg);
+    background-image: url('../img/svg/angle.svg');
+    background-repeat: no-repeat;
+    background-size: 26px;
+    background-position: left;
+  }
 }
 
 .hero__btn {
@@ -67,4 +82,37 @@
       background-image: url("../img/background-hero-desktop-3@2x.jpg");
     }
   }
+}
+
+.hero__pagination {
+  position: relative;
+  background-color: $color-default-white;
+  width: fit-content;
+  padding: 14px 20px;
+  border-radius: 20px 20px 0 0;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    right: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    background-image: url('../img/svg/angle.svg');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: left;
+  }
+
+  .swiper-pagination-bullet {
+   width: 10px;
+   height: 10px;
+   border: 1px solid $color-cerulean-blue;
+  }
+}
+
+.swiper-horizontal > .hero__pagination .swiper-pagination-bullet,
+.swiper-pagination-horizontal.hero__pagination .swiper-pagination-bullet {
+  margin: 0 6px;
 }

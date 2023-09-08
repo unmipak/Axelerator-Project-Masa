@@ -17,7 +17,7 @@
   <div class="wrapper">
     <header class="header">
       <a class="header__logo" href="index.html" aria-label="Логотип">
-        <svg width="205" height="62">
+        <svg width="28" height="28">
           <use xlink:href="./img/stack.svg#logo-default" />
         </svg>
       </a>
@@ -53,6 +53,7 @@
           <div class="swiper-wrapper">
             <div class="hero__slide hero__slide--1 swiper-slide">
               <div class="hero__wrapper">
+                <div class="hero__pagination swiper-pagination"></div>
                 <h1>Программы стажировок в крупнейших компаниях Израиля</h1>
                 <div class="hero__description">
                   <p>Получите незаменимый опыт работы в ведущих израильских компаниях и государственных организациях.
@@ -63,6 +64,7 @@
             </div>
             <div class="hero__slide hero__slide--2 swiper-slide">
               <div class="hero__wrapper">
+                <div class="hero__pagination swiper-pagination"></div>
                 <h1>Волонтёрские программы – внесите свой вклад в общество</h1>
                 <div class="hero__description">
                   <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.
@@ -73,6 +75,7 @@
             </div>
             <div class="hero__slide hero__slide--3 swiper-slide">
               <div class="hero__wrapper">
+                <div class="hero__pagination swiper-pagination"></div>
                 <h1>Глобальный профессиональный опыт обучения за рубежом</h1>
                 <div class="hero__description">
                   <p>Погрузитесь в академическую программу, проходя практику в Тель-Авиве и ощущая настоящий израильский
@@ -82,7 +85,6 @@
               </div>
             </div>
           </div>
-          <div class="hero__pagination swiper-pagination"></div>
         </section>
         <section class="about-us" id="about-us">
           <div class="about-us__header-wrapper">
@@ -244,7 +246,7 @@
                   </picture>
                   <div class="news__info">
                     <time>23/03/2023</time>
-                    <h3>Интервью с участницей программы стажировки</h3>
+                    <h3>Интервью с участницей <br> программы стажировки</h3>
                     <a class="news__link">Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в
                       ISOFound</a>
                   </div>
@@ -256,7 +258,7 @@
                       srcset="./img/news-1@2x.jpg 2x" alt="Фото Израиля">
                   </picture>
                   <div class="news__info"> <time>20/03/2023</time>
-                    <h3>Путешествуем по Израилю</h3>
+                    <h3>Путешествуем <br> по Израилю</h3>
                     <a class="news__link">Какие места посещают наши студенты весной</a>
                   </div>
                 </li>
@@ -267,7 +269,7 @@
                       srcset="./img/news-1@2x.jpg 3x" alt="Фото волонтеской программы">
                   </picture>
                   <div class="news__info"><time>17/03/2023</time>
-                    <h3>Новая программа волонтёрства</h3>
+                    <h3>Новая программа <br> волонтёрства</h3>
                     <a class="news__link">Программа помощи детям длительностью 4 месяца</a>
                   </div>
                 </li>
@@ -432,40 +434,42 @@
           </div>
         </section>
         <section class="feedback">
-          <div class="feedback__wrapper" data-form-validate data-callback="base">
-            <h3>Напишите нам</h3>
-            <p>Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
-            <form action="https://echo.htmlacademy.ru/" method="post">
-              <div class="custom-input" data-validate-type="text" data-limitation="name" data-required>
-                <label for="name">Имя</label>
-                <input type="text" name="name" id="name" aria-label="Имя" required>
-              </div>
-              <div class="custom-input" data-validate-type="phone" data-on-input-validate data-required>
-                <label for="tel">Телефон</label>
-                <input type="tel" name="tel" id="tel" aria-label="Телефон" required>
-              </div>
-              <div class="custom-input">
-                <label for="text">Ваше сообщение</label>
-                <input type="text" name="text" id="text" aria-label="Сообщение" required>
-              </div>
-              <div class="custom-input">
-                <label for="city">Выберите город</label>
-                <select type="text" name="city" id="city" aria-label="Город" required>
-                  <option value="Санкт-Петербург">Санкт-Петербург</option>
-                </select>
-              </div>
-              <div class="custom-input" data-on-input-validate data-required>
-                <label for="checkbox">Я согласен на обработку моих персональных данных</label>
-                <input type="checkbox" name="checkbox" id="checkbox" aria-label="checkbox" required>
-              </div>
-              <button class="feedback__btn btn" type="submit">Отправить</button>
-            </form>
+          <div class="feedback__background-wrapper">
+            <div class="feedback__wrapper" data-form-validate data-callback="base">
+              <h3>Напишите нам</h3>
+              <p>Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
+              <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post">
+                <div class="custom-input" data-validate-type="text" data-limitation="name" data-required>
+                  <label for="name">Имя</label>
+                  <input type="text" name="name" id="name" aria-label="Имя" required>
+                </div>
+                <div class="custom-input" data-validate-type="phone" data-on-input-validate data-required>
+                  <label for="tel">Телефон</label>
+                  <input type="tel" name="tel" id="tel" aria-label="Телефон" required>
+                </div>
+                <div class="custom-input">
+                  <label for="text">Ваше сообщение</label>
+                  <input type="text" name="text" id="text" aria-label="Сообщение" required>
+                </div>
+                <div class="custom-input">
+                  <label for="city">Выберите город</label>
+                  <select type="text" name="city" id="city" aria-label="Город" required>
+                    <option value="Санкт-Петербург">Санкт-Петербург</option>
+                  </select>
+                </div>
+                <div class="custom-input" data-validate-type="checkbox" data-on-input-validate data-required>
+                  <input type="checkbox" name="checkbox" id="checkbox" aria-label="checkbox" required>
+                  <label for="checkbox">Я согласен на обработку моих персональных данных</label>
+                </div>
+                <button class="feedback__btn btn--dark" type="submit">Отправить</button>
+              </form>
+            </div>
           </div>
         </section>
       </main>
       <footer class="footer">
         <a class="footer__logo" href="index.html" aria-label="Логотип">
-          <svg width="52" height="52">
+          <svg width="28" height="28">
             <use xlink:href="./img/stack.svg#logo-default" />
           </svg>
         </a>
@@ -489,9 +493,6 @@
             <a class="site-navigation__link" href="#contacts">Контакты</a>
           </li>
         </ul>
-        <div class="footer__tel-wrapper">
-          <a class="footer__tel" href="tel:+78007253232">8 800 725 32 32</a>
-        </div>
         <ul class="social-list">
           <li class="social-list__item">
             <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy"
@@ -515,6 +516,7 @@
             </a>
           </li>
         </ul>
+        <p class="footer__copyright">Masa © 2023 Все права защищены</p>
         <a class="footer__link" href="#">Политика конфиденциальности</a>
       </footer>
     </div>

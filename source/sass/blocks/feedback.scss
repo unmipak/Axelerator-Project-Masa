@@ -3,18 +3,32 @@
 
   h3 {
     @include text-h3--white;
+    padding-bottom: 38px;
   }
 
   p {
     @include text-regular--white;
+    padding-bottom: 30px;
   }
+}
+
+.feedback__background-wrapper {
+  background-image: url("../img/feedback-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  border-radius: 16px;
+}
+
+.feedback__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .feedback__wrapper {
   background-color: $color-cerulean-blue;
-  background-image: url("../img/feedback-desktop.jpg");
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain;
   border-radius: 16px;
+  padding: 70px 74px;
+  width: 468px;
 }

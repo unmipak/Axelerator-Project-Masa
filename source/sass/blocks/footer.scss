@@ -4,4 +4,32 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  row-gap: 25px;
+}
+
+.footer__logo {
+  padding: 10px;
+  background-color: $color-default-white;
+  border-radius: 50%;
+}
+
+.footer__copyright {
+  @include text-xsmall;
+  width: 40%;
+}
+
+.footer__link {
+  @include text-xsmall;
+  width: 40%;
+  text-align: end;
+  text-decoration: underline;
+
+  &:hover,
+  a:focus-visible {
+    color: $color-cerulean-blue;
+  }
+
+  &:active {
+    color: $color-endeavour;
+  }
 }

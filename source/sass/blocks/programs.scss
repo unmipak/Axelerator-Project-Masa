@@ -55,6 +55,21 @@
     padding: 18px 18px 0;
     width: fit-content;
     border-radius: 12px 12px 0px 0px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 18px;
+      height: 18px;
+      right: 0;
+      bottom: 0;
+      transform: translateX(100%);
+      background-image: url('../img/svg/angle.svg');
+      background-repeat: no-repeat;
+      background-size: 18px;
+      background-position: left;
+    }
   }
 
   p {

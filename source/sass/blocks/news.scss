@@ -90,34 +90,103 @@
 .news__picture {
   object-fit: cover;
   width: 100%;
+  height: 100%;
 }
 
 .news__info {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  max-width: 240px;
+  align-items: flex-start;
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   z-index: 1;
 
   time {
-    background-color: $color-default-white;
+    background-color: $color-alabaster;
     font-family: $font-regular;
     color: $color-cerulean-blue;
     font-size: 12px;
     line-height: 12px;
     letter-spacing: 0.12px;
     text-transform: uppercase;
+    padding: 12px 12px 0 0;
+    border-radius: 0 12px 0px 0px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 16px;
+      right: 0;
+      bottom: 0;
+      transform: translateX(100%);
+      background-image: url('../img/svg/angle-beige.svg');
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-position: left;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 16px;
+      left: 0;
+      top: 0;
+      transform: translateY(-100%);
+      background-image: url('../img/svg/angle-beige.svg');
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-position: left;
+    }
   }
 
   h3 {
     @include text-h5;;
-    background-color: $color-default-white;
+    background-color: $color-alabaster;
+    width: fit-content;
+    padding: 18px 18px 0 0;
+    border-radius: 0 12px 0px 0px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 16px;
+      right: 0;
+      bottom: 0;
+      transform: translateX(100%);
+      background-image: url('../img/svg/angle-beige.svg');
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-position: left;
+    }
   }
 
   a {
     @include text-xsmall;
-    background-color: $color-default-white;
+    background-color: $color-alabaster;
+    width: fit-content;
+    padding: 12px 18px 15px 0;
+    max-width: 75%;
+    border-radius: 0 12px 0px 0px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 16px;
+      right: 0;
+      bottom: 0;
+      transform: translateX(100%);
+      background-image: url('../img/svg/angle-beige.svg');
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-position: left;
+    }
   }
 }
