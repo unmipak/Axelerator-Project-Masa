@@ -15,8 +15,6 @@ const sliderHero = new Swiper('.hero', {
 
 const sliderPrograms = new Swiper('.programs__slider', {
   loop: true,
-  slidesPerView: 3,
-  spaceBetween: 32,
   navigation: {
     prevEl: '.programs__btn--prev',
     nextEl: '.programs__btn--next',
@@ -24,6 +22,20 @@ const sliderPrograms = new Swiper('.programs__slider', {
   pagination: {
     el: '.programs__pagination',
     type: 'progressbar',
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2.12,
+      spaceBetween: 32,
+      centerInsufficientSlides: true,
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 32,
+    },
   },
 });
 
@@ -46,8 +58,6 @@ const sliderNews = new Swiper('.news__slider', {
 
 const sliderReviews = new Swiper('.reviews__slider', {
   loop: true,
-  slidesPerView: 2,
-  spaceBetween: 32,
   navigation: {
     prevEl: '.reviews__btn--prev',
     nextEl: '.reviews__btn--next',
@@ -55,6 +65,20 @@ const sliderReviews = new Swiper('.reviews__slider', {
   pagination: {
     el: '.reviews__pagination',
     type: 'progressbar',
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 1.3,
+      spaceBetween: 32,
+      centerInsufficientSlides: true,
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 32,
+    },
   },
 });
 

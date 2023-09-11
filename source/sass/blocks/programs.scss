@@ -23,6 +23,7 @@
 .programs__slide {
   position: relative;
   display: grid;
+  height: auto;
 
   &::before {
     position: absolute;
@@ -50,7 +51,7 @@
   margin: 0 51px 20px 20px;
 
   h3 {
-    @include text-h3;
+    @include text-h5;
     background-color: $color-default-white;
     padding: 18px 18px 0;
     width: fit-content;
@@ -70,6 +71,10 @@
       background-size: 18px;
       background-position: left;
     }
+  }
+
+  .programs__picture {
+    object-fit: cover;
   }
 
   p {
@@ -107,4 +112,40 @@
   position: relative;
   top: auto;
   flex-grow: 1;
+}
+
+@include vp-1199 {
+  .programs {
+    padding: 0 0 100px 45px;
+  }
+
+  .programs__slide {
+    min-height: 324px;
+  }
+
+  .programs__btn,
+  .programs__btn-wrapper {
+    margin-right: 45px;
+  }
+}
+
+@include vp-767 {
+  .programs {
+    padding: 67px 15px;
+  }
+
+  .programs h2 {
+    padding-bottom: 30px;
+  }
+
+  .programs__slider-navigation {
+    margin-top: 30px;
+  }
+
+  .programs__btn,
+  .programs__btn-wrapper {
+    margin-right: 0;
+  }
+
+
 }

@@ -88,3 +88,56 @@
   top: auto;
   flex-grow: 1;
 }
+
+@include vp-1199 {
+  .reviews {
+    padding: 100px 0 100px 45px;
+  }
+
+  .reviews h2 {
+    padding: 0 45px 40px 0;
+  }
+
+  .reviews__btn-wrapper {
+    margin-right: 45px;
+  }
+}
+
+@include vp-767 {
+  .reviews {
+    padding: 0 15px 67px;
+  }
+
+  .reviews__slide {
+    padding: 30px 15px;
+  }
+
+  .reviews__slide b {
+    margin: 25px 0 20px;
+  }
+
+  .reviews__user-info {
+    max-width: none;
+    width: 100%;
+  }
+
+  .reviews__user-info img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .reviews__info {
+    width: 100%;
+    max-width: none;
+    gap: 25px;
+    padding-top: 15px;
+  }
+
+  .reviews__info dd {
+    opacity: 0.9;
+  }
+
+  .reviews__btn-wrapper {
+    margin-right: 0;
+  }
+}

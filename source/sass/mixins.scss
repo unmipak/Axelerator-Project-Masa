@@ -40,8 +40,8 @@
 
 // Desktop first
 
-@mixin vp-1919 {
-  @media (max-width: ($vp-1920 - 1px)) {
+@mixin vp-1199 {
+  @media (max-width: ($vp-1200 - 1px)) {
     @content;
   }
 }
@@ -232,7 +232,7 @@
 
   @media (max-width: ($vp-768 - 1px)) {
     font-size: 16px;
-    line-height: 222px;
+    line-height: 22px;
   }
 }
 
@@ -308,6 +308,23 @@
 
   @media (max-width: ($vp-1200 - 1px)) {
     line-height: 20px;
+  }
+
+  @media (max-width: ($vp-768 - 1px)) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+@mixin text-xxsmall {
+  font-family: $font-regular;
+  color: $color-charcoal;
+  font-size: 12px;
+  line-height: 12px;
+  margin: 0;
+
+  @media (max-width: ($vp-768 - 1px)) {
+    line-height: 14px;
   }
 }
 
