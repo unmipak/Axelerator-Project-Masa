@@ -23,13 +23,19 @@
       </a>
       <nav class="header__nav header__nav--nojs">
         <button class="header__nav-btn" aria-label="Меню сайта">Меню</button>
-        <ul class="header__nav-list">
+        <ul class="header__nav-list" data-accordion="parent">
           <li class="header__nav-item">
             <a class="header__nav-link" href="#about-us">О&nbsp;проекте
             </a>
           </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#programs">Программы</a>
+          <li class="header__nav-item" data-accordion="element">
+            <a class="header__nav-link" data-accordion="button">Программы</a>
+            <ul data-accordion="content">
+              <li><a href="#programs">Стажировки</a></li>
+              <li><a href="#programs">Волонтёрство</a></li>
+              <li><a href="#programs">Учёба</a></li>
+              <li><a href="#programs">Религия</a></li>
+            </ul>
           </li>
           <li class="header__nav-item">
             <a class="header__nav-link" href="#map">Как&nbsp;поехать</a>
@@ -37,9 +43,15 @@
           <li class="header__nav-item">
             <a class="header__nav-link" href="#reviews">Отзывы</a>
           </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#news">Новости
-            </a>
+          <li class="header__nav-item" data-accordion="element">
+            <a class="header__nav-link" data-accordion="button">Новости</a>
+            <ul data-accordion="content">
+              <li><a href="#news">Общее</a></li>
+              <li><a href="#news">Волонтёрство</a></li>
+              <li><a href="#news">Стажировки</a></li>
+              <li><a href="#news">Карьера</a></li>
+              <li><a href="#news">Путешествия</a></li>
+            </ul>
           </li>
           <li class="header__nav-item">
             <a class="header__nav-link" href="#contacts">Контакты</a>
@@ -129,7 +141,7 @@
           <a class="programs__btn btn" href="#">Все программы</a>
           <div class="programs__slider swiper">
             <div class="swiper-wrapper">
-              <div class="programs__slide programs__slide--internship #internship swiper-slide">
+              <div class="programs__slide programs__slide--internship swiper-slide">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)"
                     srcset="./img/programs-desktop-1.webp, ./img/programs-desktop-1@2x.webp 2x">
@@ -149,7 +161,7 @@
                   <a class="programs__btn" href="#" aria-label="Подробнее"></a>
                 </div>
               </div>
-              <div class="programs__slide programs__slide--volunteering #volunteering swiper-slide">
+              <div class="programs__slide programs__slide--volunteering swiper-slide">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)"
                     srcset="./img/programs-desktop-2.webp, ./img/programs-desktop-2@2x.webp 2x">
@@ -169,13 +181,13 @@
                   <a class="programs__btn" href="#" aria-label="Подробнее"></a>
                 </div>
               </div>
-              <div class="programs__slide programs__slide--studying #studying swiper-slide">
+              <div class="programs__slide programs__slide--studying swiper-slide">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)"
                     srcset="./img/programs-desktop-3.webp, ./img/programs-desktop-3@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1199px)"
                     srcset="./img/programs-desktop-3.webp, ./img/programs-desktop-3@2x.webp 2x">
-                  <source type="image/webp" srcset="./img/programs-desktop-1.webp, ./img/programs-desktop-3@2x.webp 2x">
+                  <source type="image/webp" srcset="./img/programs-desktop-3.webp, ./img/programs-desktop-3@2x.webp 2x">
                   <source media="(max-width: 767px)"
                     srcset="./img/programs-desktop-3.jpg, ./img/programs-desktop-3@2x.jpg 2x" width="290" height="400">
                   <source media="(max-width: 1199px)"
@@ -189,7 +201,7 @@
                   <a class="programs__btn" href="#" aria-label="Подробнее"></a>
                 </div>
               </div>
-              <div class="programs__slide programs__slide--religion #religion swiper-slide">
+              <div class="programs__slide programs__slide--religion swiper-slide">
                 <picture>
                 </picture>
                 <div class="programs__wrapper">
@@ -234,17 +246,17 @@
         </section>
         <section class="news" id="news">
           <h2>Новости и материалы</h2>
-          <div class="news__container" data-tabs="parent">
-            <div class="news__navigation">
-              <button class="news__btn" type="button" data-tabs="control" data-index="0">Общее</button>
-              <button class="news__btn" type="button" data-tabs="control" data-index="1">Волонтерство</button>
-              <button class="news__btn" type="button" data-tabs="control" data-index="2">Стажировки</button>
-              <button class="news__btn" type="button" data-tabs="control" data-index="3">Карьера</button>
-              <button class="news__btn" type="button" data-tabs="control" data-index="4">Путешествия</button>
+          <div class="news__container">
+            <div class="news__filters">
+              <button class="news__btn" type="button" data-news="filter" data-filter="all" >Общее</button>
+              <button class="news__btn" type="button" data-news="filter" data-filter="volunteering">Волонтерство</button>
+              <button class="news__btn" type="button" data-news="filter" data-filter="internship">Стажировки</button>
+              <button class="news__btn" type="button" data-news="filter" data-filter="career">Карьера</button>
+              <button class="news__btn" type="button" data-news="filter" data-filter="trip">Путешествия</button>
             </div>
-            <div class="news__cards news__slider swiper" data-tabs="content">
-              <ul class="news__list swiper-wrapper" data-tabs="element">
-                <li class="news__item swiper-slide">
+            <div class="news__cards news__slider swiper">
+              <ul class="news__list swiper-wrapper">
+                <li class="news__item swiper-slide" data-filter="internship">
                   <picture>
                     <source type="image/webp" srcset="./img/news-1.webp, ./img/news-1@2x.webp 2x">
                     <img class="news__picture" src="./img/news-1.jpg" width="604" height="400"
@@ -257,7 +269,7 @@
                       ISOFound</a>
                   </div>
                 </li>
-                <li class="news__item swiper-slide">
+                <li class="news__item swiper-slide" data-filter="trip">
                   <picture>
                     <source type="image/webp" srcset="./img/news-2.webp, ./img/news-2@2x.webp 2x">
                     <img class="news__picture" src="./img/news-2.jpg" width="286" height="400"
@@ -268,7 +280,7 @@
                     <a class="news__link">Какие места посещают наши студенты весной</a>
                   </div>
                 </li>
-                <li class="news__item swiper-slide">
+                <li class="news__item swiper-slide" data-filter="volunteering">
                   <picture>
                     <source type="image/webp" srcset="./img/news-3.webp, ./img/news-3@2x.webp 2x">
                     <img class="news__picture" src="./img/news-3.jpg" width="286" height="400"
@@ -279,12 +291,11 @@
                     <a class="news__link">Программа помощи детям длительностью 4 месяца</a>
                   </div>
                 </li>
-                <li class="news__item swiper-slide">
+                <li class="news__item swiper-slide" data-filter="career">
                   <div class="news__info"><time>10/03/2023</time>
                     <h3>Построй свою карьеру</h3>
                     <a class="news__link">Ведущие компании готовы трудоустроить выпускников стажировки</a>
                   </div>
-
                 </li>
               </ul>
             </div>

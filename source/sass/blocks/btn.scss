@@ -35,6 +35,7 @@
   &:focus-visible {
     background-color: $color-cerulean-blue;
     color: $color-default-white;
+    outline: none;
   }
 
   &:active {
@@ -102,6 +103,7 @@
   &:focus-visible {
     background-color: $color-default-white;
     color: $color-cerulean-blue;
+    outline: none;
   }
 
   &:active {

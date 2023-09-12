@@ -54,7 +54,11 @@
   row-gap: 4px;
 }
 
-.header__nav-list a {
+.header__nav-list-btn,
+.header__nav-link {
+  display: block;
+  margin: 0;
+  padding: 0;
   font-family: $font-medium;
   color: $color-default-white;
   font-size: 16px;
@@ -62,6 +66,51 @@
   letter-spacing: 0.32px;
   text-transform: uppercase;
   opacity: 0.7;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  text-align: start;
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    outline: none;
+    opacity: 1;
+  }
+}
+
+.header__nav-item.is-active p {
+  opacity: 1;
+}
+
+.header__nav-item.is-active .header__nav-sub-list {
+  margin-top: 20px;
+}
+
+.header__nav-sub-list {
+  list-style-type: none;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+
+}
+
+.header__nav-sub-link {
+  display: block;
+  margin: 0;
+  font-family: $font-regular;
+  color: $color-default-white;
+  font-size: 16px;
+  line-height: 16px;
+  opacity: 0.6;
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    outline: none;
+    opacity: 0.9;
+  }
 }
 
 .header__nav-btn {
@@ -98,6 +147,19 @@
     right: 4px;
   }
 
+  &:hover,
+  &:focus-visible {
+    background-color: $color-cerulean-blue;
+    color: $color-default-white;
+    outline: none;
+  }
+
+  &:hover::before,
+  &:focus-visible::before {
+    background-image: url("../img/stack.svg#menu-blue");
+    background-color: $color-default-white;
+  }
+
   &:active {
     color: $color-default-white;
     background-color: $color-cerulean-blue;
@@ -127,6 +189,13 @@
 
   svg {
     display: block;
+  }
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    outline: none;
+    opacity: 0.7;
   }
 }
 

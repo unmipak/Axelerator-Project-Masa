@@ -7,6 +7,9 @@ Swiper.use([Navigation, Pagination]);
 const sliderHero = new Swiper('.hero', {
   loop: true,
   slidesPerView: 1,
+  autoplay: {
+    delay: 3000,
+  },
   pagination: {
     el: '.hero__pagination',
     clickable: true,
@@ -14,7 +17,7 @@ const sliderHero = new Swiper('.hero', {
 });
 
 const sliderPrograms = new Swiper('.programs__slider', {
-  loop: true,
+  loop: false,
   navigation: {
     prevEl: '.programs__btn--prev',
     nextEl: '.programs__btn--next',
@@ -40,7 +43,7 @@ const sliderPrograms = new Swiper('.programs__slider', {
 });
 
 const sliderNews = new Swiper('.news__slider', {
-  loop: true,
+  loop: false,
   slidesPerView: 'auto',
   spaceBetween: 32,
   navigation: {
@@ -57,7 +60,7 @@ const sliderNews = new Swiper('.news__slider', {
 });
 
 const sliderReviews = new Swiper('.reviews__slider', {
-  loop: true,
+  loop: false,
   navigation: {
     prevEl: '.reviews__btn--prev',
     nextEl: '.reviews__btn--next',
@@ -82,4 +85,46 @@ const sliderReviews = new Swiper('.reviews__slider', {
   },
 });
 
-export {sliderHero, sliderPrograms, sliderNews, sliderReviews};
+// фильтры в разделе "Новости и материалы"
+
+let newsFilters = document.querySelector('.news__filters');
+let newsBtns = newsFilters.querySelectorAll('.news__btn');
+let newsSlides = document.querySelectorAll('.news__item');
+
+const onBtnContainerClick = (evt) => {
+  const currentBtn = evt.target.closest('.news__btn');
+  if (!currentBtn.classList.contains('news__button--active')) {
+    newsBtns.forEach((btn) => btn.classList.remove('news__button--active'));
+    currentBtn.classList.add('news__button--active');
+  }
+  if (currentBtn.dataset.filter === 'all') {
+    newsSlides.forEach((slide) => {
+      slide.style.opacity = '0';
+      slide.style.display = 'grid';
+      setTimeout(() => {
+        slide.style.opacity = '1';
+      }, 300);
+      return;
+    });
+  } else {
+    newsSlides.forEach((slide) => {
+      slide.style.opacity = '0';
+      slide.style.display = 'grid';
+      if (slide.dataset.filter !== currentBtn.dataset.filter) {
+        slide.style.display = 'none';
+      }
+      setTimeout(() => {
+        slide.style.opacity = '1';
+      }, 300);
+    });
+  }
+  sliderNews.update();
+};
+
+const initNewsBtns = () => {
+  if (newsFilters && newsBtns) {
+    newsFilters.addEventListener('click', onBtnContainerClick);
+  }
+};
+
+export {sliderHero, sliderPrograms, sliderNews, sliderReviews, initNewsBtns};
