@@ -157,8 +157,10 @@
                 </picture>
                 <div class="programs__wrapper">
                   <h3>Стажировки</h3>
-                  <p>Получите незаменимый опыт работы в крупнейших израильских компаниях.</p>
-                  <a class="programs__btn" href="#" aria-label="Подробнее"></a>
+                  <div class="programs__link-wrapper">
+                    <p>Получите незаменимый опыт работы в крупнейших израильских компаниях.</p>
+                    <a class="programs__link" href="#" aria-label="Подробнее"></a>
+                  </div>
                 </div>
               </div>
               <div class="programs__slide programs__slide--volunteering swiper-slide">
@@ -177,8 +179,10 @@
                 </picture>
                 <div class="programs__wrapper">
                   <h3>Волонтёрство</h3>
-                  <p>Помогайте другим и развивайте свои лидерские качества.</p>
-                  <a class="programs__btn" href="#" aria-label="Подробнее"></a>
+                  <div class="programs__link-wrapper">
+                    <p>Помогайте другим и развивайте свои лидерские качества.</p>
+                    <a class="programs__link" href="#" aria-label="Подробнее"></a>
+                  </div>
                 </div>
               </div>
               <div class="programs__slide programs__slide--studying swiper-slide">
@@ -197,8 +201,10 @@
                 </picture>
                 <div class="programs__wrapper">
                   <h3>Учёба</h3>
-                  <p>Получите образование и измените свое будущее.</p>
-                  <a class="programs__btn" href="#" aria-label="Подробнее"></a>
+                  <div class="programs__link-wrapper">
+                    <p>Получите образование и измените свое будущее.</p>
+                    <a class="programs__link" href="#" aria-label="Подробнее"></a>
+                  </div>
                 </div>
               </div>
               <div class="programs__slide programs__slide--religion swiper-slide">
@@ -206,8 +212,10 @@
                 </picture>
                 <div class="programs__wrapper">
                   <h3>Религия</h3>
-                  <p>Познакомьтесь с религией.</p>
-                  <a class="programs__btn" href="#" aria-label="Подробнее"></a>
+                  <div class="programs__link-wrapper">
+                    <p>Познакомьтесь с религией.</p>
+                    <a class="programs__link" href="#" aria-label="Подробнее"></a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -248,15 +256,16 @@
           <h2>Новости и материалы</h2>
           <div class="news__container">
             <div class="news__filters">
-              <button class="news__btn" type="button" data-news="filter" data-filter="all" >Общее</button>
-              <button class="news__btn" type="button" data-news="filter" data-filter="volunteering">Волонтерство</button>
+              <button class="news__btn news__btn--active" type="button" data-news="filter" data-filter="all">Общее</button>
+              <button class="news__btn" type="button" data-news="filter"
+                data-filter="volunteering">Волонтерство</button>
               <button class="news__btn" type="button" data-news="filter" data-filter="internship">Стажировки</button>
               <button class="news__btn" type="button" data-news="filter" data-filter="career">Карьера</button>
               <button class="news__btn" type="button" data-news="filter" data-filter="trip">Путешествия</button>
             </div>
             <div class="news__cards news__slider swiper">
               <ul class="news__list swiper-wrapper">
-                <li class="news__item swiper-slide" data-filter="internship">
+                <li class="news__item news__item--main swiper-slide" data-filter="internship">
                   <picture>
                     <source type="image/webp" srcset="./img/news-1.webp, ./img/news-1@2x.webp 2x">
                     <img class="news__picture" src="./img/news-1.jpg" width="604" height="400"
@@ -265,8 +274,11 @@
                   <div class="news__info">
                     <time>23/03/2023</time>
                     <h3>Интервью с участницей <br> программы стажировки</h3>
-                    <a class="news__link">Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в
-                      ISOFound</a>
+                    <div class="news__link-wrapper">
+                      <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в
+                        ISOFound</p>
+                      <a class="news__link"></a>
+                    </div>
                   </div>
                 </li>
                 <li class="news__item swiper-slide" data-filter="trip">
@@ -277,7 +289,10 @@
                   </picture>
                   <div class="news__info"> <time>20/03/2023</time>
                     <h3>Путешествуем <br> по Израилю</h3>
-                    <a class="news__link">Какие места посещают наши студенты весной</a>
+                    <div class="news__link-wrapper">
+                      <p>Какие места посещают наши студенты весной</p>
+                      <a class="news__link"></a>
+                    </div>
                   </div>
                 </li>
                 <li class="news__item swiper-slide" data-filter="volunteering">
@@ -288,13 +303,24 @@
                   </picture>
                   <div class="news__info"><time>17/03/2023</time>
                     <h3>Новая программа <br> волонтёрства</h3>
-                    <a class="news__link">Программа помощи детям длительностью 4 месяца</a>
+                    <div class="news__link-wrapper">
+                      <p>Программа помощи детям длительностью 4 месяца</p>
+                      <a class="news__link"></a>
+                    </div>
                   </div>
                 </li>
                 <li class="news__item swiper-slide" data-filter="career">
+                  <picture>
+                    <source type="image/webp" srcset="./img/news-4.webp, ./img/news-4@2x.webp 2x">
+                    <img class="news__picture" src="./img/news-4.jpg" width="604" height="400"
+                      srcset="./img/news-4@2x.jpg 2x" alt="Фото рабочего пространства">
+                  </picture>
                   <div class="news__info"><time>10/03/2023</time>
-                    <h3>Построй свою карьеру</h3>
-                    <a class="news__link">Ведущие компании готовы трудоустроить выпускников стажировки</a>
+                    <h3>Построй свою <br> карьеру</h3>
+                    <div class="news__link-wrapper">
+                      <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                      <a class="news__link"></a>
+                    </div>
                   </div>
                 </li>
               </ul>
@@ -443,11 +469,7 @@
               <dd><a href="mailto:info@masa.ru">info@masa.ru</a></dd>
             </div>
           </dl>
-          <div class="contacts__map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2286.83518949454!2d82.92557507683593!3d55.02858067282481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfe5dbac1b18ff%3A0xb19fdf59fc163a35!2z0JHQtdC50YIg0JzQtdC90LDRhdC10Lw!5e0!3m2!1sru!2sru!4v1693852649715!5m2!1sru!2sru"
-              width="1240" height="500" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="contacts__map" id="map">
           </div>
         </section>
         <section class="feedback">

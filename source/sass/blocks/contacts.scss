@@ -38,6 +38,17 @@
   a {
     @include text-regular--white;
   }
+
+  a:hover,
+  a:focus-visible {
+    outline: none;
+    text-decoration: underline;
+  }
+
+  a:active {
+    text-decoration: none;
+    opacity: 0.8;
+  }
 }
 
 .contacts__item {
@@ -47,9 +58,14 @@
 
 .contacts__map {
   width: 100%;
+  height: 500px;
   margin: 40px auto 0;
   position: relative;
   border-radius: 16px;
+  background-image: url('../img/map.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
 
   &::before {
     position: absolute;
@@ -64,6 +80,7 @@
 
   iframe {
     border-radius: 16px;
+    width: 100%;
   }
 }
 

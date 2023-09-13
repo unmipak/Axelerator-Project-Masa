@@ -16,6 +16,7 @@
   border: 1px solid $color-cerulean-blue;
   border-radius: 16px;
   height: auto;
+  min-width: 604px;
 
   h3 {
     @include text-medium;
@@ -100,6 +101,10 @@
 
   .reviews__btn-wrapper {
     margin-right: 45px;
+  }
+
+  .reviews__slide {
+    min-width: 0;
   }
 }
 

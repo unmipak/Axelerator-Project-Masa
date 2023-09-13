@@ -19,14 +19,21 @@
   font-size: 14px;
   line-height: 14px;
   opacity: 0.6;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 20px;
   cursor: pointer;
+  user-select: none;
 
-  &.is-active {
-    border: 1px solid $color-cerulean-blue;
+  &:hover,
+  &:focus-visible {
+    outline: none;
     opacity: 1;
   }
+}
+
+.news__btn--active {
+  border: 1px solid $color-cerulean-blue;
+  opacity: 1;
 }
 
 .news__filters {
@@ -65,6 +72,19 @@
     line-height: 20px;
     padding: 5px;
   }
+
+  span:hover,
+  span:focus-visible {
+    outline: 1px solid $color-cerulean-blue;
+    color: $color-cerulean-blue;
+    background-color: transparent;
+  }
+
+  span:active {
+    background-color: $color-endeavour;
+    color: $color-default-white;
+    opacity: 1;
+  }
 }
 
 .news__list {
@@ -78,10 +98,41 @@
   height: auto;
   width: auto;
   display: grid;
+  border-radius: 12px;
+  overflow-x: hidden;
 
   picture {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
+  }
+
+  p {
+    @include text-xsmall;
+    display: block;
+  }
+
+  h3 {
+    @include text-h5;
+    background-color: $color-alabaster;
+    width: fit-content;
+    padding: 18px 18px 0 0;
+    border-radius: 0 12px 0px 0px;
+    position: relative;
+    bottom: -0.5px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 16px;
+      right: 0.6px;
+      bottom: 0;
+      transform: translateX(100%);
+      background-image: url('../img/svg/angle-beige.svg');
+      background-repeat: no-repeat;
+      background-size: 16px;
+      background-position: left;
+    }
   }
 }
 
@@ -89,6 +140,7 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
+  background-color: $color-alabaster;
 }
 
 .news__info {
@@ -111,13 +163,14 @@
     padding: 12px 12px 0 0;
     border-radius: 0 12px 0px 0px;
     position: relative;
+    bottom: -1.1px;
 
     &::before {
       position: absolute;
       content: "";
       width: 16px;
       height: 16px;
-      right: 0;
+      right: 0.7px;
       bottom: 0;
       transform: translateX(100%);
       background-image: url('../img/svg/angle-beige.svg');
@@ -132,7 +185,7 @@
       width: 16px;
       height: 16px;
       left: 0;
-      top: 0;
+      top: 0.8px;
       transform: translateY(-100%);
       background-image: url('../img/svg/angle-beige.svg');
       background-repeat: no-repeat;
@@ -140,52 +193,83 @@
       background-position: left;
     }
   }
+}
 
-  h3 {
-    @include text-h5;;
-    background-color: $color-alabaster;
-    width: fit-content;
-    padding: 18px 18px 0 0;
-    border-radius: 0 12px 0px 0px;
-    position: relative;
+.news__link-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 16px;
+  background-color: $color-alabaster;
+  width: fit-content;
+  padding: 12px 18px 15px 0;
+  border-radius: 0 12px 0px 0px;
+  position: relative;
 
-    &::before {
-      position: absolute;
-      content: "";
-      width: 16px;
-      height: 16px;
-      right: 0;
-      bottom: 0;
-      transform: translateX(100%);
-      background-image: url('../img/svg/angle-beige.svg');
-      background-repeat: no-repeat;
-      background-size: 16px;
-      background-position: left;
-    }
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    right: 0.6px;
+    bottom: 0;
+    transform: translateX(100%);
+    background-image: url('../img/svg/angle-beige.svg');
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: left;
+  }
+}
+
+.news__item p {
+  max-width: 176px;
+}
+
+.news__item--main p {
+  max-width: 325px;
+}
+
+.news__item h3 {
+  max-width: 214px;
+}
+
+.news__item--main h3 {
+  max-width: 291px;
+}
+
+.news__link {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: $color-cerulean-blue;
+  background-image: url('../img/stack.svg#arrow-white');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 8px;
+
+  &:hover,
+  &:focus-visible {
+    background-image: url("../img/stack.svg#arrow-blue");
+    background-color: $color-default-white;
+    transform: rotate(45deg);
+    top: 0;
+    left: 0;
+    outline: none;
   }
 
-  a {
-    @include text-xsmall;
-    background-color: $color-alabaster;
-    width: fit-content;
-    padding: 12px 18px 15px 0;
-    max-width: 75%;
-    border-radius: 0 12px 0px 0px;
-    position: relative;
+  &:active {
+    background-image: url("../img/stack.svg#arrow-blue");
+    background-color: $color-default-white;
+    transform: rotate(45deg);
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+  }
 
-    &::before {
-      position: absolute;
-      content: "";
-      width: 16px;
-      height: 16px;
-      right: 0;
-      bottom: 0;
-      transform: translateX(100%);
-      background-image: url('../img/svg/angle-beige.svg');
-      background-repeat: no-repeat;
-      background-size: 16px;
-      background-position: left;
-    }
+  &:disabled {
+    background-color: $color-mischka;
+    background-image: url('../img/stack.svg#arrow-white');
   }
 }
 

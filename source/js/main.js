@@ -2,42 +2,28 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initAccordions} from './vendor/init-accordion';
-import {initNewsBtns} from './vendor';
+import {initNewsBtns, setMap} from './vendor';
 
 window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
 
   window.addEventListener('load', () => {
-    initModals();
+    initModals(); // модальное окно
+
     const form = new Form();
     window.form = form;
-    form.init();
-  });
-  initNewsBtns();
-});
+    form.init(); // форма
 
-// аккордеон
+    initNewsBtns(); // фильтры
 
-window.addEventListener('DOMContentLoaded', () => {
-  window.addEventListener('load', () => {
-    initAccordions();
+    initAccordions(); // аккордеон
+
+    setMap(); // карта
+
   });
 });
 
-// валидация формы
-
-window.addEventListener('DOMContentLoaded', () => {
-
-  iosVhFix();
-
-  window.addEventListener('load', () => {
-    initModals();
-    const form = new Form();
-    window.form = form;
-    form.init();
-  });
-});
 
 // открытие и закрытие меню
 

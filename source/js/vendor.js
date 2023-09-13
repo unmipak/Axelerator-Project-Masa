@@ -1,6 +1,7 @@
 // Swiper 7.4.1
 import Swiper, {Navigation, Pagination} from './vendor/swiper';
 import './vendor/focus-visible-polyfill';
+import * as L from './vendor/leaflet/leaflet';
 
 Swiper.use([Navigation, Pagination]);
 
@@ -93,9 +94,9 @@ let newsSlides = document.querySelectorAll('.news__item');
 
 const onBtnContainerClick = (evt) => {
   const currentBtn = evt.target.closest('.news__btn');
-  if (!currentBtn.classList.contains('news__button--active')) {
-    newsBtns.forEach((btn) => btn.classList.remove('news__button--active'));
-    currentBtn.classList.add('news__button--active');
+  if (!currentBtn.classList.contains('news__btn--active')) {
+    newsBtns.forEach((btn) => btn.classList.remove('news__btn--active'));
+    currentBtn.classList.add('news__btn--active');
   }
   if (currentBtn.dataset.filter === 'all') {
     newsSlides.forEach((slide) => {
@@ -127,4 +128,48 @@ const initNewsBtns = () => {
   }
 };
 
-export {sliderHero, sliderPrograms, sliderNews, sliderReviews, initNewsBtns};
+// карта
+
+const COORDINATES = [55.0285253, 82.9269913];
+const ZOOM_SIZE = 16;
+const ICON_URL = 'img/svg/pin.svg';
+const mobileBreakpoint = window.matchMedia('(max-width:768px)');
+const tabletBreakpoint = window.matchMedia('(max-width:1200px)');
+const getPinSize = () => {
+  let pinSize;
+  if (mobileBreakpoint.matches) {
+    pinSize = [24, 24];
+  } else if (tabletBreakpoint.matches) {
+    pinSize = [40, 40];
+  } else {
+    pinSize = [70, 70];
+  }
+  return pinSize;
+};
+
+const setMap = () => {
+  const map = L.map('map', {
+    center: COORDINATES,
+    zoom: ZOOM_SIZE,
+    scrollWheelZoom: false,
+  });
+
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  }).addTo(map);
+
+  const marker = L.marker(COORDINATES).addTo(map);
+
+  const changeMarker = () => {
+    marker.setIcon(L.icon({
+      iconUrl: ICON_URL,
+      iconSize: getPinSize(),
+    }));
+  };
+
+  changeMarker();
+  window.addEventListener('resize', changeMarker);
+};
+
+export {sliderHero, sliderPrograms, sliderNews, sliderReviews, initNewsBtns, setMap};

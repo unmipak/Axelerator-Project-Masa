@@ -11,6 +11,13 @@
   padding: 10px;
   background-color: $color-default-white;
   border-radius: 50%;
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    outline: none;
+    opacity: 0.7;
+  }
 }
 
 .footer__wrapper {
@@ -23,6 +30,16 @@
 .footer__copyright {
   @include text-xsmall;
   max-width: 40%;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-cerulean-blue;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-endeavour;
+  }
 }
 
 .footer__link {
@@ -32,8 +49,9 @@
   text-decoration: underline;
 
   &:hover,
-  a:focus-visible {
+  &:focus-visible {
     color: $color-cerulean-blue;
+    outline: none;
   }
 
   &:active {

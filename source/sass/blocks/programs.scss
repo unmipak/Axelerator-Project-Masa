@@ -24,12 +24,15 @@
   position: relative;
   display: grid;
   height: auto;
+  border-radius: 12px;
+  overflow-x: hidden;
 
   &::before {
     position: absolute;
     content: "";
     width: 100%;
     height: 100%;
+    border-radius: 12px;
     background-color: $overlay-photo;
     top: 0;
     left: 0;
@@ -57,13 +60,14 @@
     width: fit-content;
     border-radius: 12px 12px 0px 0px;
     position: relative;
+    bottom: -0.8px;
 
     &::before {
       position: absolute;
       content: "";
       width: 18px;
       height: 18px;
-      right: 0;
+      right: 0.7px;
       bottom: 0;
       transform: translateX(100%);
       background-image: url('../img/svg/angle.svg');
@@ -73,15 +77,61 @@
     }
   }
 
-  .programs__picture {
-    object-fit: cover;
-  }
-
   p {
     @include text-xsmall;
+    max-width: 85%;
+  }
+}
+
+.programs__picture {
+  object-fit: cover;
+  background-color: $color-alabaster;
+  width: 100%;
+}
+
+.programs__link-wrapper {
+  background-color: $color-default-white;
+  padding: 12px 18px 15px;
+  border-radius: 0px 12px 12px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.programs__link {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: $color-cerulean-blue;
+  background-image: url('../img/stack.svg#arrow-white');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 8px;
+
+  &:hover,
+  &:focus-visible {
+    background-image: url("../img/stack.svg#arrow-blue");
     background-color: $color-default-white;
-    padding: 12px 18px 15px;
-    border-radius: 0px 12px 12px 12px;
+    transform: rotate(45deg);
+    top: 0;
+    left: 0;
+    outline: none;
+  }
+
+  &:active {
+    background-image: url("../img/stack.svg#arrow-blue");
+    background-color: $color-default-white;
+    transform: rotate(45deg);
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+  }
+
+  &:disabled {
+    background-color: $color-mischka;
+    background-image: url('../img/stack.svg#arrow-white');
   }
 }
 

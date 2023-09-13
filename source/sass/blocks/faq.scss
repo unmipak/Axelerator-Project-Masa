@@ -35,6 +35,7 @@
   dd {
     margin: 0;
     overflow: hidden;
+
     p {
       @include text-regular;
       display: block;
@@ -51,19 +52,27 @@
   border-radius: 50%;
   border: none;
   background-color: $color-cerulean-blue;
-  position: relative;
 
-  &::before {
-    position: absolute;
-    content: "";
-    background-image: url("../img/stack.svg#plus");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 18px;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+  background-image: url("../img/stack.svg#plus");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px;
+
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    border: 1px solid $color-cerulean-blue;
+    background-color: transparent;
+    background-image: url("../img/stack.svg#plus-blue");
+  }
+
+  &:active {
+    background-color: $color-endeavour;
+  }
+
+  &:disabled {
+    background-color: $color-mischka;
   }
 }
 
@@ -84,10 +93,27 @@
 
   .faq__btn {
     background-color: $color-default-white;
+    background-image: url("../img/stack.svg#minus-blue");
   }
 
-  .faq__btn::before {
+  .faq__btn:hover,
+  .faq__btn:focus-visible {
+    border: 1px solid $color-default-white;
+    background-color: transparent;
+    background-image: url("../img/stack.svg#minus");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px;
+  }
+
+  .faq__btn:active {
+    border: none;
+    background-color: $color-default-white;
     background-image: url("../img/stack.svg#minus-blue");
+  }
+
+  .faq__btn:disabled {
+    background-color: $color-mischka;
   }
 }
 
