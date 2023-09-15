@@ -1,14 +1,10 @@
 .programs {
   padding: 0 100px 120px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
 
   h2 {
     @include text-h2;
     max-width: 50%;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
   }
 }
 
@@ -18,6 +14,10 @@
 
 .programs__slider {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .programs__slide {
@@ -57,6 +57,7 @@
     @include text-h5;
     background-color: $color-default-white;
     padding: 18px 18px 0;
+    min-width: 194px;
     width: fit-content;
     border-radius: 12px 12px 0px 0px;
     position: relative;
@@ -79,7 +80,7 @@
 
   p {
     @include text-xsmall;
-    max-width: 85%;
+    max-width: 80%;
   }
 }
 
@@ -97,6 +98,7 @@
   justify-content: space-between;
   align-items: center;
   column-gap: 5px;
+  min-height: 79px;
 }
 
 .programs__link {
@@ -136,6 +138,7 @@
 }
 
 .programs__slider-navigation {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -169,6 +172,10 @@
     padding: 0 0 100px 45px;
   }
 
+  .programs h2 {
+    padding-bottom: 42px;
+  }
+
   .programs__slide {
     min-height: 324px;
   }
@@ -177,11 +184,25 @@
   .programs__btn-wrapper {
     margin-right: 45px;
   }
+
+  .programs__wrapper {
+    margin: 20px 41px 20px 20px;
+  }
+
+  .programs__wrapper h3 {
+    padding: 10px 10px 0 18px;
+    min-width: 173px;
+  }
+
+  .programs__link-wrapper {
+    padding: 0 18px;
+  }
 }
 
 @include vp-767 {
   .programs {
     padding: 67px 15px;
+    position: relative;
   }
 
   .programs h2 {
@@ -197,5 +218,39 @@
     margin-right: 0;
   }
 
+  .programs__pagination {
+    display: none;
+  }
 
+  .programs__btn-wrapper {
+    order: -1;
+  }
+
+  .programs__btn {
+    order: 1;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  .programs__slider {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .programs__slider-navigation {
+    margin: 0;
+    order: -1;
+    max-width: 52px;
+    margin-left: auto;
+  }
+
+  .programs h2 {
+    order: -2;
+    max-width: 50%;
+  }
+
+  .programs__wrapper {
+    margin: 18px 10px;
+  }
 }

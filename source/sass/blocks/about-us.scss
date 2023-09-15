@@ -2,13 +2,13 @@
   padding: 120px 100px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
-  column-gap: 159px;
+  column-gap: 78px;
 }
 
 .about-us__header-wrapper {
-  max-width: 35%;
+  max-width: 45%;
 
   h2 {
     @include text-h2;
@@ -21,21 +21,22 @@
 }
 
 .about-us__wrapper {
-  max-width: 40%;
+  max-width: 500px;
 
   h3 {
     @include text-h3;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
   }
 
   p {
     @include text-regular;
-    padding-bottom: 40px;
+    padding-bottom: 34px;
   }
 }
 
 .about-us__btn {
   margin-bottom: 60px;
+  width: fit-content;
 }
 
 .about-us__advantages {
@@ -48,17 +49,34 @@
     padding: 100px 45px;
     flex-direction: column;
     gap: 0;
-    row-gap: 40px;
+  }
+
+  .about-us h2 {
+    padding-bottom: 22px;
   }
 
   .about-us__header-wrapper {
     max-width: none;
     width: 100%;
+    padding-bottom: 30px;
   }
 
   .about-us__wrapper {
     max-width: none;
     width: 100%;
+  }
+
+  .about-us__wrapper p {
+    padding-bottom: 36px;
+  }
+
+  .about-us h3 {
+    padding-bottom: 23px;
+    max-width: 498px;
+  }
+
+  .about-us p {
+    max-width: 498px;
   }
 }
 
@@ -81,6 +99,6 @@
   }
 
   .about-us__btn {
-    margin-bottom: 0;
+    margin: 0;
   }
 }

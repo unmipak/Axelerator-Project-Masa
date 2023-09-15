@@ -1,14 +1,14 @@
 .feedback {
-  padding: 120px 100px 60px;
+  padding: 120px 100px 58px;
 
   h3 {
     @include text-h3--white;
-    padding-bottom: 38px;
+    padding-bottom: 30px;
   }
 
   p {
     @include text-regular--white;
-    padding-bottom: 30px;
+    padding-bottom: 16px;
   }
 }
 
@@ -23,19 +23,40 @@
 .feedback__form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
 .feedback__wrapper {
   background-color: $color-cerulean-blue;
   border-radius: 16px;
-  padding: 70px 74px;
-  max-width: 468px;
+  padding: 80px 74px 50px;
+  max-width: 498px;
+}
+
+.feedback__btn {
+  margin-top: 20px;
 }
 
 @include vp-1199 {
   .feedback {
     padding: 100px 45px 60px;
+  }
+
+  .feedback p {
+    padding-bottom: 30px;
+  }
+
+  .feedback__wrapper {
+    padding: 60px 45px 56px;
+    max-width: 442px;
+  }
+
+  .feedback__background-wrapper {
+    background-image: url("../img/feedback-tablet.jpg");
+  }
+
+  .feedback__btn {
+    margin-top: 16px;
   }
 }
 

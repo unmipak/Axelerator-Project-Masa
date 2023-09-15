@@ -1,7 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
-import {initAccordions} from './vendor/init-accordion';
+import {accordions, initAccordions} from './vendor/init-accordion';
 import {initNewsBtns, setMap} from './vendor';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -46,34 +46,29 @@ navBtn.addEventListener('click', function () {
     navMenu.classList.add('header__nav--closed');
     navMenu.classList.remove('header__nav--opened');
     overlay.classList.remove('wrapper-overlay--menu-opened');
+    accordions.closeAllAccordion(navList);
   }
 });
 
 
-navList.addEventListener('click', function () {
-  if (navMenu.classList.contains('header__nav--opened')) {
-    navMenu.classList.remove('header__nav--opened');
+navList.addEventListener('click', (evt) => {
+  const link = evt.target.closest('a');
+  if (link.classList.contains('header__nav-link') || link.classList.contains('header__nav-sub-link')) {
     navMenu.classList.add('header__nav--closed');
+    navMenu.classList.remove('header__nav--opened');
     overlay.classList.remove('wrapper-overlay--menu-opened');
+    accordions.closeAllAccordion(navList);
+  } else {
+    return;
   }
 });
-
-
-//navLinks.forEach((link) => {
-//  link.addEventListener('click', function () {
-//    if (navMenu.classList.contains('header__nav--opened')) {
-//      navMenu.classList.remove('header__nav--opened');
-//      navMenu.classList.add('header__nav--closed');
-//      overlay.classList.remove('wrapper-overlay--menu-opened');
-//    }
-//  });
-//});
 
 overlay.addEventListener('click', function () {
   if (navMenu.classList.contains('header__nav--opened')) {
     navMenu.classList.add('header__nav--closed');
     navMenu.classList.remove('header__nav--opened');
     overlay.classList.remove('wrapper-overlay--menu-opened');
+    accordions.closeAllAccordion(navList);
   }
 });
 

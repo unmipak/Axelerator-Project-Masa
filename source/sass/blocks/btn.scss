@@ -1,7 +1,7 @@
 .btn {
   display: block;
   position: relative;
-  padding: 20px 68px 20px 30px;
+  padding: 20px 78px 20px 30px;
 
   font-family: $font-medium;
   color: $color-cerulean-blue;
@@ -70,7 +70,7 @@
 .btn--dark {
   display: block;
   position: relative;
-  padding: 20px 68px 20px 30px;
+  padding: 20px 78px 20px 30px;
 
   font-family: $font-medium;
   color: $color-default-white;
@@ -140,5 +140,12 @@
     font-size: 12px;
     line-height: 12px;
     letter-spacing: 0.24px;
+    padding: 14px 68px 14px 30px;
+  }
+
+  .btn::before {
+    width: 34px;
+    height: 34px;
+    background-size: 8px;
   }
 }

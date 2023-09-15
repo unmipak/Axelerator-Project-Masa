@@ -45,8 +45,6 @@ const sliderPrograms = new Swiper('.programs__slider', {
 
 const sliderNews = new Swiper('.news__slider', {
   loop: false,
-  slidesPerView: 'auto',
-  spaceBetween: 32,
   navigation: {
     prevEl: '.news__btn--prev',
     nextEl: '.news__btn--next',
@@ -56,6 +54,28 @@ const sliderNews = new Swiper('.news__slider', {
     clickable: true,
     renderBullet(index, className) {
       return '<span class="' + className + '">' + (index + 1) + '</span>';
+    },
+  },
+  breakpoints: {
+    320: {
+      spaceBetween: 20,
+      slidesPerView: 1,
+      grid: {
+        rows: 2,
+        fill: 'row',
+      },
+    },
+    768: {
+      spaceBetween: 30,
+      slidesPerView: 2,
+      grid: {
+        rows: 2,
+        fill: 'row',
+      },
+    },
+    1200: {
+      slidesPerView: 'auto',
+      spaceBetween: 32,
     },
   },
 });
@@ -92,7 +112,7 @@ let newsFilters = document.querySelector('.news__filters');
 let newsBtns = newsFilters.querySelectorAll('.news__btn');
 let newsSlides = document.querySelectorAll('.news__item');
 
-const onBtnContainerClick = (evt) => {
+const onFiltersClick = (evt) => {
   const currentBtn = evt.target.closest('.news__btn');
   if (!currentBtn.classList.contains('news__btn--active')) {
     newsBtns.forEach((btn) => btn.classList.remove('news__btn--active'));
@@ -124,7 +144,7 @@ const onBtnContainerClick = (evt) => {
 
 const initNewsBtns = () => {
   if (newsFilters && newsBtns) {
-    newsFilters.addEventListener('click', onBtnContainerClick);
+    newsFilters.addEventListener('click', onFiltersClick);
   }
 };
 

@@ -3,7 +3,7 @@
 
   h2 {
     @include text-h2;
-    padding-bottom: 40px;
+    padding-bottom: 44px;
   }
 }
 
@@ -12,7 +12,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 50px;
+  padding: 50px 50px 46px;
   border: 1px solid $color-cerulean-blue;
   border-radius: 16px;
   height: auto;
@@ -25,7 +25,7 @@
   b {
     @include text-h5;
     width: 100%;
-    margin: 30px 0 25px;
+    margin: 26px 0 14px;
   }
 
   p {
@@ -38,7 +38,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  max-width: 180px;
+  max-width: 300px;
 
   img {
     border-radius: 50%;
@@ -54,6 +54,7 @@
 
   dt {
     @include text-caption;
+    padding-bottom: 6px;
   }
 
   dd {
