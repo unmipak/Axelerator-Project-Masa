@@ -29,22 +29,6 @@
     display: none;
   }
 
-  &__wrapper {
-    position: relative;
-
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100%;
-    padding: 60px 40px;
-
-    @include vp-767 {
-      padding: 60px 16px;
-    }
-  }
-
   &__overlay {
     position: absolute;
     top: 0;
@@ -115,4 +99,48 @@
 
     pointer-events: auto;
   }
+}
+
+.modal__wrapper {
+  background-color: $color-default-white;
+  border-radius: 16px;
+  max-width: 510px;
+  margin: 90px auto auto;
+  padding: 52px 80px 60px;
+  position: relative;
+
+  h3 {
+    @include text-h3;
+    padding-bottom: 8px;
+    text-align: center;
+  }
+
+  p {
+    @include text-regular;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+}
+
+.modal__btn-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 22px;
+  height: 22px;
+  border: none;
+  background: transparent;
+  background-image: url('../img/stack.svg#plus-blue');
+  transform: rotate(45deg);
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal__btn {
+  width: fit-content;
+  margin: 12px auto 0;
 }

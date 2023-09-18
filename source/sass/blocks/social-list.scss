@@ -6,7 +6,7 @@
   margin: 0;
   padding: 0;
   align-items: center;
-  width: 148px;
+  max-width: 148px;
 }
 
 .social-list__item {
@@ -46,6 +46,7 @@
 @include vp-1199 {
   .social-list {
     order: 1;
+    column-gap: 10px;
   }
 }
 
@@ -53,7 +54,6 @@
   .social-list {
     margin-top: 5px;
     width: auto;
-    column-gap: 10px;
   }
 
   .social-list__item {

@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {accordions, initAccordions} from './vendor/init-accordion';
 import {initNewsBtns, setMap} from './vendor';
+import {CustomSelect} from './modules/select/custom-select';
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -21,6 +22,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     setMap(); // карта
 
+    const select = new CustomSelect();
+    select.init(); // кастомный селект
   });
 });
 
@@ -71,4 +74,3 @@ overlay.addEventListener('click', function () {
     accordions.closeAllAccordion(navList);
   }
 });
-

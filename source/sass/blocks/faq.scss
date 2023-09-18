@@ -121,6 +121,10 @@
   .faq__btn:disabled {
     background-color: $color-mischka;
   }
+
+  &:active {
+    background-color: $color-endeavour;
+  }
 }
 
 @include vp-1199 {

@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   row-gap: 10px;
+  opacity: 0.8;
 
   label {
     width: 100%;
@@ -10,13 +11,13 @@
     font-size: 14px;
     line-height: 14px;
     color: $color-alabaster;
-    opacity: 0.8;
     order: -1;
   }
 
-  &:hover label,
-  &:focus-visible label,
-  &:active label {
+  &:hover,
+  &:focus-visible,
+  &:focus-within,
+  &:active {
     outline: none;
     opacity: 1;
   }
@@ -43,8 +44,8 @@
     }
   }
 
-  input:focus-visible + label,
-  select:focus-visible + label {
+  input:focus-visible+label,
+  textarea:focus-visible+label {
     opacity: 1;
   }
 
@@ -58,7 +59,7 @@
 
   label[for=checkbox] {
     width: 100%;
-    margin: 2px 0 0 10px;
+    margin: 4px 0 0 10px;
     position: relative;
     font-size: 12px;
     line-height: 12px;
@@ -70,13 +71,13 @@
     position: absolute;
   }
 
-  .custom-input__checkbox + label {
+  .custom-input__checkbox+label {
     display: flex;
     align-items: center;
     user-select: none;
   }
 
-  .custom-input__checkbox + label::before {
+  .custom-input__checkbox+label::before {
     content: "";
     min-width: 20px;
     width: 20px;
@@ -91,29 +92,29 @@
     left: -10px;
   }
 
-  .custom-input__checkbox:checked + label {
+  .custom-input__checkbox:checked+label {
     opacity: 1;
   }
 
-  .custom-input__checkbox:disabled + label {
+  .custom-input__checkbox:disabled+label {
     background-color: rgba(255, 255, 255, 0.6);
     opacity: 1;
   }
 
-  .custom-input__checkbox:checked + label::before {
+  .custom-input__checkbox:checked+label::before {
     background-image: url('../img/stack.svg#tick-blue');
     background-color: $color-default-white;
     opacity: 1;
   }
 
-  .custom-input__checkbox:checked:hover + label::before,
-  .custom-input__checkbox:checked:focus-visible + label::before {
+  .custom-input__checkbox:checked:hover+label::before,
+  .custom-input__checkbox:checked:focus-visible+label::before {
     background-image: url('../img/stack.svg#tick-white');
     background-color: transparent;
     opacity: 1;
   }
 
-  .custom-input__checkbox:checked:disabled + label {
+  .custom-input__checkbox:checked:disabled+label {
     background-image: url('../img/stack.svg#tick-white');
     background-color: $color-mischka;
     opacity: 1;
@@ -124,7 +125,7 @@
     input,
     textarea {
       border: 1px solid $color-wild-watermelon;
-      background: rgba(255, 94, 102, 0.20);
+      background: rgba(255, 94, 102, 0.2);
       opacity: 1;
 
       &:focus,
@@ -134,12 +135,52 @@
       }
     }
 
+    input[type="checkbox"] {
+      opacity: 0;
+    }
+
     label::before {
       background-image: none;
       border: 1px solid $color-wild-watermelon;
-      background: rgba(255, 94, 102, 0.20);
-      opacity: 0.7;
+      background: rgba(255, 94, 102, 0.2);
     }
+  }
+}
+
+.custom-input--light {
+  input,
+  textarea,
+  select {
+    border: 1px solid $color-charcoal;
+    color: $color-charcoal;
+  }
+
+  label {
+    color: $color-charcoal;
+  }
+
+  .custom-input__checkbox+label::before {
+    border: 1px solid $color-charcoal;
+  }
+
+  .custom-input__checkbox:disabled+label {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .custom-input__checkbox:checked+label::before {
+    background-image: url('../img/stack.svg#tick-white');
+    background-color: $color-cerulean-blue;
+  }
+
+  .custom-input__checkbox:checked:hover+label::before,
+  .custom-input__checkbox:checked:focus-visible+label::before {
+    background-image: url('../img/stack.svg#tick-white');
+    background-color: $color-cerulean-blue;
+  }
+
+  .custom-input__checkbox:checked:disabled+label {
+    background-image: url('../img/stack.svg#tick-white');
+    background-color: $color-mischka;
   }
 }
 
