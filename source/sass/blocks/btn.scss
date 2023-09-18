@@ -136,14 +136,16 @@
 }
 
 @include vp-767 {
-  .btn {
+  .btn,
+  .btn--dark {
     font-size: 12px;
     line-height: 12px;
     letter-spacing: 0.24px;
-    padding: 14px 68px 14px 30px;
+    padding: 14px 58px 14px 20px;
   }
 
-  .btn::before {
+  .btn::before,
+  .btn--dark::before {
     width: 34px;
     height: 34px;
     background-size: 8px;

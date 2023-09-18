@@ -201,7 +201,7 @@
 
 @include vp-767 {
   .programs {
-    padding: 67px 15px;
+    padding: 0 15px 69px;
     position: relative;
   }
 
@@ -213,9 +213,10 @@
     margin-top: 30px;
   }
 
-  .programs__btn,
-  .programs__btn-wrapper {
+  .programs__btn {
     margin-right: 0;
+    column-gap: 7px;
+    padding: 14px 68px 14px 30px;
   }
 
   .programs__pagination {
@@ -224,6 +225,7 @@
 
   .programs__btn-wrapper {
     order: -1;
+    column-gap: 7px;
   }
 
   .programs__btn {

@@ -41,9 +41,9 @@
   flex-direction: column;
   align-items: flex-start;
 
-  padding: 35px 25px;
+  padding: 32px 25px 35px;
   background-color: $color-cerulean-blue;
-  row-gap: 28px;
+  row-gap: 24px;
   min-width: 286px;
   border-radius: 16px;
 }
@@ -86,7 +86,7 @@
 }
 
 .header__nav-item.is-active .header__nav-sub-list {
-  margin-top: 20px;
+  margin: 18px 0 0;
 }
 
 .header__nav-sub-list {
@@ -94,7 +94,7 @@
   padding-left: 16px;
   display: flex;
   flex-direction: column;
-  row-gap: 16px;
+  row-gap: 11px;
 
 }
 
@@ -205,10 +205,19 @@
   .header {
     padding: 30px 45px;
   }
+
+  .header__nav--opened {
+    right: 45px;
+  }
 }
 
 @include vp-767 {
   .header {
     padding: 20px 15px;
+  }
+
+  .header__nav--opened {
+    right: 15px;
+    width: calc(100% - 30px);
   }
 }

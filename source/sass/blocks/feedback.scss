@@ -1,14 +1,14 @@
 .feedback {
-  padding: 120px 100px 58px;
+  padding: 120px 100px 60px;
 
   h3 {
     @include text-h3--white;
-    padding-bottom: 30px;
+    padding-bottom: 26px;
   }
 
   p {
     @include text-regular--white;
-    padding-bottom: 16px;
+    padding-bottom: 20px;
   }
 }
 
@@ -29,12 +29,12 @@
 .feedback__wrapper {
   background-color: $color-cerulean-blue;
   border-radius: 16px;
-  padding: 80px 74px 50px;
+  padding: 84px 74px 49px;
   max-width: 498px;
 }
 
 .feedback__btn {
-  margin-top: 20px;
+  margin-top: 26px;
 }
 
 @include vp-1199 {
@@ -42,12 +42,16 @@
     padding: 100px 45px 60px;
   }
 
+  .feedback h3 {
+    padding-bottom: 28px;
+  }
+
   .feedback p {
     padding-bottom: 30px;
   }
 
   .feedback__wrapper {
-    padding: 60px 45px 56px;
+    padding: 62px 45px 58px;
     max-width: 442px;
   }
 
@@ -56,7 +60,7 @@
   }
 
   .feedback__btn {
-    margin-top: 16px;
+    margin-top: 22px;
   }
 }
 
@@ -66,10 +70,18 @@
   }
 
   .feedback h3 {
-    padding-bottom: 20px;
+    padding-bottom: 18px;
+  }
+
+  .feedback p {
+    padding-bottom: 26px;
   }
 
   .feedback__wrapper {
     padding: 50px 15px;
+  }
+
+  .feedback__btn {
+    margin-top: 16px;
   }
 }

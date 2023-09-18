@@ -27,6 +27,7 @@
   .site-navigation {
     width: 528px;
     column-gap: 15px;
+    margin: 0;
   }
 }
 
@@ -34,5 +35,8 @@
   .site-navigation {
     justify-content: center;
     width: 100%;
+    margin: 0;
+    column-gap: 30px;
+    row-gap: 8px;
   }
 }

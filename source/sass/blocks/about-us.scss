@@ -82,7 +82,7 @@
 
 @include vp-767 {
   .about-us {
-    padding: 67px 15px;
+    padding: 67px 15px 72px;
     row-gap: 30px;
   }
 
@@ -94,11 +94,23 @@
     padding-bottom: 20px;
   }
 
+  .about-us__header-wrapper {
+    padding: 0;
+  }
+
+  .about-us__header-wrapper p {
+    padding: 0;
+  }
+
+  .about-us__wrapper h3 {
+    padding-bottom: 10px;
+  }
+
   .about-us__wrapper p {
-    padding-bottom: 30px;
+    padding-bottom: 28px;
   }
 
   .about-us__btn {
-    margin: 0;
+    margin: 0 0 8px;
   }
 }

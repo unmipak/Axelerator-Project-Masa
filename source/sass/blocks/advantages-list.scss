@@ -82,6 +82,22 @@
     flex-direction: column;
     column-gap: 0;
     row-gap: 22px;
-    padding: 20px 20px 40px;
+    padding: 40px 20px 40px 30px;
+  }
+
+  .advantages-list__item {
+    padding: 21px 16px 21px 20px;
+    row-gap: 5px;
+  }
+
+  .advantages-list__item::before {
+    background-size: 14px;
+  }
+
+  .advantages-list__item dt {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.16px;
+    max-width: none;
   }
 }

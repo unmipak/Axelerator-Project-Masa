@@ -85,11 +85,11 @@
 
   .rules img {
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 46px;
   }
 
   .rules h3 {
-    padding: 6px 0 42px;
+    padding: 0 0 42px;
     max-width: none;
   }
 
@@ -115,29 +115,40 @@
 
 @include vp-767 {
   .rules {
-    padding: 67px 15px;
+    padding: 69px 15px;
   }
 
   .rules h2 {
-    padding-bottom: 15px;
+    padding-bottom: 14px;
   }
 
   .rules p {
-    padding-bottom: 30px;
+    padding: 0 0 24px;
   }
 
-  .rules picture {
-    padding-bottom: 30px;
+  .rules img {
+    margin: 0 0 36px;
   }
 
   .rules h3 {
-    padding-bottom: 15px;
+    padding: 0 0 26px;
+  }
+
+  .rules__list {
+    padding-left: 14px;
+    row-gap: 15px;
   }
 
   .rules__item {
     width: 100%;
     max-width: none;
-    padding: 24px 25px;
+    padding: 18px 25px;
+  }
+
+  .rules__item span {
+    font-size: 18px;
+    top: -12px;
+    left: -28px;
   }
 
   .rules__item p {

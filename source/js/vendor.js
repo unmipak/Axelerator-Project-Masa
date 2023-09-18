@@ -62,7 +62,7 @@ const sliderNews = new Swiper('.news__slider', {
       slidesPerView: 1,
       grid: {
         rows: 2,
-        fill: 'row',
+        fill: 'dense',
       },
     },
     768: {
@@ -95,7 +95,7 @@ const sliderReviews = new Swiper('.reviews__slider', {
       slidesPerView: 1,
     },
     768: {
-      slidesPerView: 1.3,
+      slidesPerView: 1.28,
       spaceBetween: 32,
       centerInsufficientSlides: true,
     },
