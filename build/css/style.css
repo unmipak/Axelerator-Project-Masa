@@ -4952,6 +4952,13 @@ button,
     overflow-x: scroll;
     padding-bottom: 24px;
   }
+  .news__filters::-webkit-scrollbar {
+    display: none;
+  }
+  .news__filters {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
   .news__btn {
     padding: 10px 14px;
     font-size: 12px;

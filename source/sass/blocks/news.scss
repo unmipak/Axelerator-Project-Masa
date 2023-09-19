@@ -338,6 +338,15 @@
     justify-content: flex-start;
     overflow-x: scroll;
     padding-bottom: 24px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .news__filters {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
   .news__btn {
