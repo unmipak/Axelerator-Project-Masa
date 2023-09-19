@@ -6,13 +6,6 @@
   display: flex;
   flex-direction: column;
   row-gap: 12px;
-  opacity: 0.8;
-
-  &:hover,
-  &:focus-within,
-  &:focus-visible {
-    opacity: 1;
-  }
 
   select {
     position: absolute;
@@ -33,6 +26,7 @@
     line-height: 14px;
     color: $color-alabaster;
     order: -1;
+    opacity: 0.8;
   }
 
   &__button {
@@ -41,7 +35,7 @@
     width: 100%;
     height: 50px;
     padding: 5px 20px 5px 10px;
-    border: 1px solid $color-default-white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
     background-color: transparent;
     outline: none;
@@ -136,6 +130,19 @@
     clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
   }
 
+  &:hover,
+  &:focus-within,
+  &:focus-visible {
+
+    .custom-select__label {
+      opacity: 1;
+    }
+
+    .custom-select__button {
+      border: 1px solid $color-charcoal;
+    }
+  }
+
   &.is-disabled {
     pointer-events: none;
 
@@ -190,7 +197,7 @@
 
   .custom-select__button {
     color: $color-charcoal;
-    border: 1px solid $color-charcoal;
+    border: 1px solid rgba(72, 72, 72, 0.3);
   }
 
   .custom-select__text {
@@ -201,5 +208,17 @@
 @include vp-767 {
   .custom-select__label {
     font-size: 12px;
+  }
+
+  .custom-select--light {
+   row-gap: 8px;
+  }
+
+  .custom-select--light .custom-select__label {
+    font-size: 14px;
+  }
+
+  .custom-select__button {
+    height: 44px;
   }
 }
