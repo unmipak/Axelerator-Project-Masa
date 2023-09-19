@@ -1,4 +1,4 @@
-.social-list{
+.social-list {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -30,6 +30,7 @@
   &:focus-visible,
   a:focus-visible {
     outline: none;
+
     svg {
       opacity: 0.7;
     }
@@ -37,6 +38,7 @@
 
   &:active {
     background-color: $color-endeavour;
+
     svg {
       opacity: 1;
     }

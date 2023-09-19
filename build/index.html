@@ -21,9 +21,9 @@
           <use xlink:href="./img/stack.svg#logo-default" />
         </svg>
       </a>
-      <nav class="header__nav header__nav--nojs">
+      <nav class="header__nav header__nav--no-js">
         <button class="header__nav-btn" aria-label="Меню сайта">Меню</button>
-        <ul class="header__nav-list" data-accordion="parent" tabindex="-1">
+        <ul class="header__nav-list" data-accordion="parent">
           <li class="header__nav-item">
             <a class="header__nav-link" href="#about-us">О&nbsp;проекте
             </a>
@@ -212,8 +212,6 @@
                 </div>
               </div>
               <div class="programs__slide programs__slide--religion swiper-slide">
-                <picture>
-                </picture>
                 <div class="programs__wrapper">
                   <h3>Религия</h3>
                   <div class="programs__link-wrapper">
@@ -299,7 +297,7 @@
                       srcset="./img/news-1-desktop@2x.jpg 3x" alt="Фото волонтеской программы">
                   </picture>
                   <div class="news__info">
-                    <time>23/03/2023</time>
+                    <span>23/03/2023</span>
                     <h3>Интервью с&nbsp;участницей <br> программы стажировки</h3>
                     <div class="news__link-wrapper">
                       <p>Саша рассказывает, как попала в&nbsp;программу и&nbsp;как прошла 6-месячная стажировка в
@@ -322,7 +320,7 @@
                     <img class="news__picture" src="./img/news-2-desktop.jpg" width="286" height="400"
                       srcset="./img/news-2-desktop@2x.jpg 3x" alt="Фото волонтеской программы">
                   </picture>
-                  <div class="news__info"> <time>20/03/2023</time>
+                  <div class="news__info"> <span>20/03/2023</span>
                     <h3>Путешествуем <br> по&nbsp;Израилю</h3>
                     <div class="news__link-wrapper">
                       <p>Какие места посещают наши студенты весной</p>
@@ -344,7 +342,7 @@
                     <img class="news__picture" src="./img/news-3-desktop.jpg" width="286" height="400"
                       srcset="./img/news-3-desktop@2x.jpg 3x" alt="Фото волонтеской программы">
                   </picture>
-                  <div class="news__info"><time>17/03/2023</time>
+                  <div class="news__info"><span>17/03/2023</span>
                     <h3>Новая программа <br> волонтёрства</h3>
                     <div class="news__link-wrapper">
                       <p>Программа помощи детям длительностью 4&nbsp;месяца</p>
@@ -366,7 +364,7 @@
                     <img class="news__picture" src="./img/news-4-desktop.jpg" width="604" height="400"
                       srcset="./img/news-4-desktop@2x.jpg 2x" alt="Фото рабочего пространства">
                   </picture>
-                  <div class="news__info"><time>10/03/2023</time>
+                  <div class="news__info"><span>10/03/2023</span>
                     <h3>Построй свою <br> карьеру</h3>
                     <div class="news__link-wrapper">
                       <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
@@ -545,7 +543,7 @@
                   <label for="tel">Телефон</label>
                 </div>
                 <div class="custom-input" data-validate-type="text" data-required>
-                  <textarea type="text" name="text" id="text" aria-label="Сообщение" required></textarea>
+                  <textarea name="text" id="text" aria-label="Сообщение" required></textarea>
                   <label for="text">Ваше сообщение</label>
                 </div>
                 <div class="custom-select" data-select>
@@ -556,79 +554,79 @@
                   <ul class="custom-select__list">
                     <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="true">
                       Санкт-Петербург</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="id-1">Санкт-Петербург</li>
                     <li class="custom-select__item" tabindex="0" data-select-value="id-2">Санкт-Петербург</li>
                     <li class="custom-select__item" tabindex="0" data-select-value="id-3">Санкт-Петербург</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-4">Санкт-Петербург</li>
                   </ul>
                   <span class="custom-select__label">Выберите город:</span>
                 </div>
-                <div class="custom-input" data-validate-type="checkbox" data-on-input-validate data-required>
+                <div class="custom-input custom-input--light" data-validate-type="checkbox" data-on-input-validate
+                  data-required>
                   <input class="custom-input__checkbox" type="checkbox" name="checkbox" id="checkbox"
                     aria-label="checkbox" required>
                   <label for="checkbox">Я&nbsp;согласен на&nbsp;обработку моих персональных данных</label>
                 </div>
                 <button class="feedback__btn btn--dark" type="submit">Отправить</button>
+              </form>
             </div>
-            </form>
           </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <a class="footer__logo" href="index.html" aria-label="Логотип">
+          <svg width="28" height="28">
+            <use xlink:href="./img/stack.svg#logo-default" />
+          </svg>
+        </a>
+        <ul class="site-navigation">
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#about-us">О проекте</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#programs">Программы</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#rules">Как&nbsp;поехать</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#reviews">Отзывы</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#news">Новости</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+        <ul class="social-list">
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy"
+              aria-label="Страница в VK">
+              <svg width="16" height="16">
+                <use xlink:href="./img/stack.svg#vk" />
+              </svg></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--ok" href="#" aria-label="Страница в Одноклассниках">
+              <svg width="16" height="16">
+                <use xlink:href="./img/stack.svg#odnoklassniki" />
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link social-list__link--reddit" href="#" aria-label="Страница на Reddit">
+              <svg width="16" height="16">
+                <use xlink:href="./img/stack.svg#reddit" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="footer__wrapper">
+          <p class="footer__copyright">Masa &copy;&nbsp;2023 Все права защищены</p>
+          <a class="footer__link" href="#">Политика конфиденциальности</a>
+        </div>
+      </footer>
     </div>
-    </section>
-    </main>
-    <footer class="footer">
-      <a class="footer__logo" href="index.html" aria-label="Логотип">
-        <svg width="28" height="28">
-          <use xlink:href="./img/stack.svg#logo-default" />
-        </svg>
-      </a>
-      <ul class="site-navigation">
-        <li class="site-navigation__item">
-          <a class="site-navigation__link" href="#about-us">О проекте</a>
-        </li>
-        <li class="site-navigation__item">
-          <a class="site-navigation__link" href="#programs">Программы</a>
-        </li>
-        <li class="site-navigation__item">
-          <a class="site-navigation__link" href="#rules">Как&nbsp;поехать</a>
-        </li>
-        <li class="site-navigation__item">
-          <a class="site-navigation__link" href="#reviews">Отзывы</a>
-        </li>
-        <li class="site-navigation__item">
-          <a class="site-navigation__link" href="#news">Новости</a>
-        </li>
-        <li class="site-navigation__item">
-          <a class="site-navigation__link" href="#contacts">Контакты</a>
-        </li>
-      </ul>
-      <ul class="social-list">
-        <li class="social-list__item">
-          <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy"
-            aria-label="Страница в VK">
-            <svg width="16" height="16">
-              <use xlink:href="./img/stack.svg#vk" />
-            </svg></a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link social-list__link--ok" href="#" aria-label="Страница в Одноклассниках">
-            <svg width="16" height="16">
-              <use xlink:href="./img/stack.svg#odnoklassniki" />
-            </svg>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link social-list__link--reddit" href="#" aria-label="Страница на Reddit">
-            <svg width="16" height="16">
-              <use xlink:href="./img/stack.svg#reddit" />
-            </svg>
-          </a>
-        </li>
-      </ul>
-      <div class="footer__wrapper">
-        <p class="footer__copyright">Masa &copy;&nbsp;2023 Все права защищены</p>
-        <a class="footer__link" href="#">Политика конфиденциальности</a>
-      </div>
-    </footer>
-  </div>
   </div>
 
   <div class="modal" data-modal="Форма обратной связи">
@@ -638,11 +636,11 @@
       <p>Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!</p>
       <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
         <div class="custom-input custom-input--light" data-validate-type="text" data-limitation="name" data-required>
-          <input type="text" name="name" id="name" aria-label="Имя" required>
+          <input type="text" name="name" id="name-modal" aria-label="Имя" required>
           <label for="name">Имя</label>
         </div>
         <div class="custom-input custom-input--light" data-validate-type="phone" data-on-input-validate data-required>
-          <input type="tel" name="tel" id="tel" aria-label="Телефон" required>
+          <input type="tel" name="tel" id="tel-modal" aria-label="Телефон" required>
           <label for="tel">Телефон</label>
         </div>
         <div class="custom-select custom-select--light" data-select>
@@ -658,12 +656,14 @@
           </ul>
           <span class="custom-select__label">Выберите город:</span>
         </div>
-        <div class="custom-input custom-input--light" data-validate-type="checkbox" data-on-input-validate data-required>
+        <div class="custom-input custom-input--light" data-validate-type="checkbox" data-on-input-validate
+          data-required>
           <input class="custom-input__checkbox" type="checkbox" name="checkbox" id="checkbox-modal"
             aria-label="checkbox" required>
           <label for="checkbox-modal">Я&nbsp;согласен на&nbsp;обработку моих персональных данных</label>
         </div>
         <button class="modal__btn btn" type="submit">Отправить</button>
+      </form>
     </div>
   </div>
 

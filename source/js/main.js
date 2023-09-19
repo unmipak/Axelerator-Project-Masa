@@ -32,8 +32,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 let navMenu = document.querySelector('.header__nav');
 let navList = document.querySelector('.header__nav-list');
-let navLinks = navList.getElementsByTagName('a');
-let header = document.querySelector('.header');
 let navBtn = document.querySelector('.header__nav-btn');
 let overlay = document.querySelector('.wrapper-overlay');
 

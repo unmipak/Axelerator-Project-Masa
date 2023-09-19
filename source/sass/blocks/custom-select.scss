@@ -133,7 +133,6 @@
   &:hover,
   &:focus-within,
   &:focus-visible {
-
     .custom-select__label {
       opacity: 1;
     }
@@ -173,7 +172,6 @@
   }
 
   &.not-empty {
-
     .custom-select__text {
       opacity: 1;
     }
@@ -181,7 +179,6 @@
 
   &.slide-up.not-empty,
   &.slide-up.is-open {
-
     .custom-select__text {
       opacity: 1;
     }
@@ -206,12 +203,16 @@
 }
 
 @include vp-767 {
+  .custom-select {
+    margin: 0;
+  }
+
   .custom-select__label {
     font-size: 12px;
   }
 
   .custom-select--light {
-   row-gap: 8px;
+    row-gap: 8px;
   }
 
   .custom-select--light .custom-select__label {
