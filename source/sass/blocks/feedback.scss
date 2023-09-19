@@ -18,6 +18,10 @@
   background-position: right;
   background-size: cover;
   border-radius: 16px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/feedback-desktop-@2x.jpg");
+  }
 }
 
 .feedback__form {
@@ -57,6 +61,10 @@
 
   .feedback__background-wrapper {
     background-image: url("../img/feedback-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/feedback-tablet-@2x.jpg");
+    }
   }
 
   .feedback__btn {
