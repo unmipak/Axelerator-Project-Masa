@@ -1,8 +1,5 @@
 .rules {
   background-color: $color-cerulean-blue;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 138px;
   padding: 120px 210px 108px 100px;
 
   h2 {
@@ -38,6 +35,15 @@
   }
 }
 
+.rules__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 138px;
+
+}
+
 .rules__list {
   margin: 50px 0 0 20px;
   padding: 0;
@@ -70,9 +76,12 @@
 
 @include vp-1199 {
   .rules {
+    padding: 100px 45px;
+  }
+
+  .rules__container {
     display: flex;
     flex-direction: column;
-    padding: 100px 45px;
   }
 
   .rules h2 {

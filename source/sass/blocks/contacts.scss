@@ -1,15 +1,20 @@
 .contacts {
   background-color: $color-cerulean-blue;
   padding: 120px 100px 120px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
 
   h2 {
     @include text-h2--white;
     max-width: 50%;
   }
+}
+
+.contacts__container {
+  margin: 0 auto;
+  max-width: 1440px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .contacts__list {
@@ -105,6 +110,9 @@
 @include vp-767 {
   .contacts {
     padding: 67px 15px;
+  }
+
+  .contacts__container {
     flex-direction: column;
   }
 

@@ -5,10 +5,12 @@
   flex-wrap: wrap;
   align-items: flex-start;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 10;
   width: 100%;
   padding: 30px 100px;
+  max-width: 1440px;
 }
 
 .header__nav--no-js {
@@ -238,6 +240,9 @@
 @include vp-1199 {
   .header {
     padding: 30px 45px;
+    left: 0;
+    transform: none;
+    max-width: none;
   }
 
   .header__nav--opened {

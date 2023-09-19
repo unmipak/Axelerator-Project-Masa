@@ -18,6 +18,8 @@
   background-position: right;
   background-size: cover;
   border-radius: 16px;
+  max-width: 1440px;
+  margin: 0 auto;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/feedback-desktop-@2x.jpg");

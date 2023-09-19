@@ -1,10 +1,15 @@
 .about-us {
   padding: 120px 100px;
+}
+
+.about-us__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
   column-gap: 78px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .about-us__header-wrapper {
@@ -47,6 +52,10 @@
 @include vp-1199 {
   .about-us {
     padding: 100px 45px;
+
+  }
+
+  .about-us__container {
     flex-direction: column;
     gap: 0;
   }
@@ -83,6 +92,10 @@
 @include vp-767 {
   .about-us {
     padding: 67px 15px 72px;
+
+  }
+
+  .about-us__container {
     row-gap: 30px;
   }
 

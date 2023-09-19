@@ -1,5 +1,10 @@
 .footer {
   padding: 0 100px 50px;
+}
+
+.footer__container {
+  margin: 0 auto;
+  max-width: 1440px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -90,9 +95,12 @@
 
 @include vp-767 {
   .footer {
+    padding: 0 15px 40px;
+  }
+
+  .footer__container {
     flex-direction: column;
     justify-content: center;
-    padding: 0 15px 40px;
     row-gap: 12px;
   }
 
