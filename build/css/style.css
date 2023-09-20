@@ -4371,6 +4371,7 @@ button,
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
   grid-row: 2/4;
+  counter-reset: item;
 }
 
 .rules__item {
@@ -4381,7 +4382,9 @@ button,
   width: 100%;
   list-style-type: none;
 }
-.rules__item span {
+.rules__item::before {
+  font-family: "Manrope Regular", "Arial", sans-serif;
+  color: #ffffff;
   font-size: 22px;
   position: absolute;
   padding: 10px;
@@ -4392,6 +4395,8 @@ button,
   -webkit-transform: translateX(50%);
       -ms-transform: translateX(50%);
           transform: translateX(50%);
+  content: counter(item);
+  counter-increment: item;
 }
 
 @media (max-width: 1199px) {
@@ -4437,9 +4442,9 @@ button,
   }
   .rules__item {
     max-width: 46.4%;
-    padding: 22px 25px 30px;
+    padding: 26px 25px 25px;
   }
-  .rules__item span {
+  .rules__item::before {
     top: -16px;
     left: -31px;
   }
@@ -4469,7 +4474,7 @@ button,
     max-width: none;
     padding: 18px 25px;
   }
-  .rules__item span {
+  .rules__item::before {
     font-size: 18px;
     top: -12px;
     left: -28px;
@@ -4908,7 +4913,7 @@ button,
     padding: 100px 45px 107px;
   }
   .news h2 {
-    padding-bottom: 26px;
+    padding-bottom: 29px;
   }
   .news__filters {
     gap: 5px;
