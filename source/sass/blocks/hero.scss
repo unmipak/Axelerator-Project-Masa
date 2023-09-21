@@ -191,13 +191,19 @@
 
 @include vp-767 {
   .hero h1 {
-    padding: 20px 14px;
+    padding: 20px 14px 10px;
     border-radius: 0 16px 16px 0;
   }
 
   .hero__pagination {
-    padding: 10px 16px;
+    padding: 4px 10px 4px;
     border-radius: 12px 12px 0 0;
+  }
+
+  .hero__pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    border: 1px solid $color-cerulean-blue;
   }
 
   .hero__slide {
@@ -216,7 +222,7 @@
 
   .hero p {
     background-color: $color-default-white;
-    padding: 0 14px 15px;
+    padding: 0 14px 10px;
     min-width: 261px;
     max-width: 80%;
     border-radius: 0 0 14px 0;
@@ -256,5 +262,9 @@
       background-size: 10px;
       background-position: left;
     }
+  }
+
+  .hero__btn {
+    margin: 0;
   }
 }

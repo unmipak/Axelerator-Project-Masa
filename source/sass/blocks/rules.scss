@@ -27,12 +27,13 @@
     grid-column: 1 / 2;
     grid-row: 3 / 4;
   }
+}
 
-  img {
-    margin-top: 33px;
-    border-radius: 16px;
-    object-fit: cover;
-  }
+.rules__picture {
+  margin-top: 33px;
+  border-radius: 16px;
+  object-fit: cover;
+  background-color: $color-cerulean-blue;
 }
 
 .rules__container {
@@ -41,7 +42,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 138px;
-
 }
 
 .rules__list {
@@ -74,7 +74,8 @@
     top: -18px;
     left: -28px;
     transform: translateX(50%);
-    content: counter(item); counter-increment: item;
+    content: counter(item);
+    counter-increment: item;
   }
 }
 
@@ -96,7 +97,7 @@
     padding-bottom: 0;
   }
 
-  .rules img {
+  .rules__picture {
     width: 100%;
     margin-bottom: 46px;
   }
@@ -139,7 +140,7 @@
     padding: 0 0 24px;
   }
 
-  .rules img {
+  .rules__picture {
     margin: 0 0 36px;
   }
 
