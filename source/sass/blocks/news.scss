@@ -379,10 +379,11 @@
     height: 100%;
 
     &--1 {
-      background-image: url("../img/news-1-mobile.jpg");
+      background-image: url("../img/news-1-mobile.png");
+      background-position: top;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/news-1-mobile@2x.jpg");
+        background-image: url("../img/news-1-mobile@2x.png");
       }
     }
 
@@ -395,10 +396,11 @@
     }
 
     &--3 {
-      background-image: url("../img/news-3-mobile.jpg");
+      background-image: url("../img/news-3-mobile.png");
+      background-position: top;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/news-3-mobile@2x.jpg");
+        background-image: url("../img/news-3-mobile@2x.png");
       }
     }
 

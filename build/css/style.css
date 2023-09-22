@@ -5043,12 +5043,13 @@ button,
     height: 100%;
   }
   .news__item--1 {
-    background-image: url("../img/news-1-mobile.jpg");
+    background-image: url("../img/news-1-mobile.png");
+    background-position: top;
   }
 }
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
   .news__item--1 {
-    background-image: url("../img/news-1-mobile@2x.jpg");
+    background-image: url("../img/news-1-mobile@2x.png");
   }
 }
 @media (max-width: 767px) {
@@ -5063,12 +5064,13 @@ button,
 }
 @media (max-width: 767px) {
   .news__item--3 {
-    background-image: url("../img/news-3-mobile.jpg");
+    background-image: url("../img/news-3-mobile.png");
+    background-position: top;
   }
 }
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
   .news__item--3 {
-    background-image: url("../img/news-3-mobile@2x.jpg");
+    background-image: url("../img/news-3-mobile@2x.png");
   }
 }
 @media (max-width: 767px) {
