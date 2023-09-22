@@ -25,16 +25,17 @@
 }
 
 @mixin text-h1 {
-  font-family: $font-light;
+  font-family: $font-extralight;
   color: $color-cerulean-blue;
   font-size: 54px;
   line-height: 62px;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   margin: 0;
 
   @media (max-width: $vp-1199) {
     font-size: 36px;
     line-height: 44px;
+    letter-spacing: 0.7px;
   }
 
   @media (max-width: $vp-767) {
@@ -44,15 +45,16 @@
 }
 
 @mixin text-h2 {
-  font-family: $font-light;
+  font-family: $font-extralight;
   color: $color-cerulean-blue;
   font-size: 50px;
   line-height: 50px;
   margin: 0;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 
   @media (max-width: $vp-1199) {
     font-size: 34px;
+    letter-spacing: 0.6px;
   }
 
   @media (max-width: $vp-767) {
@@ -62,15 +64,16 @@
 }
 
 @mixin text-h2--white {
-  font-family: $font-light;
+  font-family: $font-extralight;
   color: $color-default-white;
   font-size: 50px;
   line-height: 50px;
   margin: 0;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 
   @media (max-width: $vp-1199) {
     font-size: 34px;
+    letter-spacing: 0.7px;
   }
 
   @media (max-width: $vp-767) {
@@ -80,16 +83,17 @@
 }
 
 @mixin text-h3 {
-  font-family: $font-light;
+  font-family: $font-extralight;
   color: $color-cerulean-blue;
   font-size: 32px;
   line-height: 36px;
   margin: 0;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 
   @media (max-width: $vp-1199) {
     font-size: 28px;
     line-height: 28px;
+    letter-spacing: 0.6px;
   }
 
   @media (max-width: $vp-767) {
@@ -99,16 +103,17 @@
 }
 
 @mixin text-h3--white {
-  font-family: $font-light;
+  font-family: $font-extralight;
   color: $color-default-white;
   font-size: 32px;
   line-height: 36px;
   margin: 0;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.6px;
 
   @media (max-width: $vp-1199) {
     font-size: 28px;
     line-height: 28px;
+    letter-spacing: 0.5px;
   }
 
   @media (max-width: $vp-767) {
@@ -154,7 +159,7 @@
 }
 
 @mixin text-h5 {
-  font-family: $font-regular;
+  font-family: $font-light;
   color: $color-cerulean-blue;
   font-size: 24px;
   line-height: 26px;

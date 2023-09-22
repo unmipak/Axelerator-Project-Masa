@@ -1911,6 +1911,13 @@ svg.leaflet-image-layer.leaflet-interactive path {
   font-display: swap;
   src: url("../fonts/Manrope-Light.woff2") format("woff2"), url("../fonts/Manrope-Light.woff") format("woff");
 }
+@font-face {
+  font-style: normal;
+  font-weight: 200;
+  font-family: "Manrope ExtraLight";
+  font-display: swap;
+  src: url("../fonts/Manrope-ExtraLight.woff2") format("woff2"), url("../fonts/Manrope-ExtraLight.woff") format("woff");
+}
 *,
 *::before,
 *::after {
@@ -2395,12 +2402,12 @@ button,
   position: relative;
 }
 .modal__wrapper h3 {
-  font-family: "Manrope Light", "Arial", sans-serif;
+  font-family: "Manrope ExtraLight", "Arial", sans-serif;
   color: #316dc2;
   font-size: 32px;
   line-height: 36px;
   margin: 0;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   padding-bottom: 8px;
   text-align: center;
 }
@@ -2408,6 +2415,7 @@ button,
   .modal__wrapper h3 {
     font-size: 28px;
     line-height: 28px;
+    letter-spacing: 0.6px;
   }
 }
 @media (max-width: 767px) {
@@ -3259,11 +3267,11 @@ button,
   width: 100%;
 }
 .hero h1 {
-  font-family: "Manrope Light", "Arial", sans-serif;
+  font-family: "Manrope ExtraLight", "Arial", sans-serif;
   color: #316dc2;
   font-size: 54px;
   line-height: 62px;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   margin: 0;
   position: relative;
   background-color: #ffffff;
@@ -3271,11 +3279,13 @@ button,
   padding: 40px 50px 30px;
   max-width: 968px;
   top: -0.6px;
+  min-height: 194px;
 }
 @media (max-width: 1199px) {
   .hero h1 {
     font-size: 36px;
     line-height: 44px;
+    letter-spacing: 0.7px;
   }
 }
 @media (max-width: 767px) {
@@ -3321,6 +3331,7 @@ button,
   border-radius: 0 0 30px 30px;
   padding: 0 50px 18px;
   max-width: 772px;
+  min-height: 89px;
   position: relative;
   top: -2px;
 }
@@ -3444,6 +3455,7 @@ button,
   .hero h1 {
     padding: 30px 40px 20px;
     max-width: 659px;
+    min-height: 142px;
   }
   .hero__slide {
     padding: 30px 45px 60px;
@@ -3482,6 +3494,7 @@ button,
   .hero__description {
     padding: 0 40px 30px;
     max-width: 591px;
+    min-height: 89px;
   }
 }
 @media (max-width: 1199px) {
@@ -3503,6 +3516,7 @@ button,
   .hero h1 {
     padding: 20px 14px 10px;
     border-radius: 0 16px 16px 0;
+    min-height: 114px;
   }
   .hero__pagination {
     padding: 4px 10px 4px;
@@ -3520,6 +3534,10 @@ button,
   .hero__description {
     padding: 0;
     background-color: transparent;
+    min-height: 147px;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
   .hero__description::before {
     display: none;
@@ -3599,17 +3617,18 @@ button,
   max-width: 45%;
 }
 .about-us__header-wrapper h2 {
-  font-family: "Manrope Light", "Arial", sans-serif;
+  font-family: "Manrope ExtraLight", "Arial", sans-serif;
   color: #316dc2;
   font-size: 50px;
   line-height: 50px;
   margin: 0;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   padding-bottom: 30px;
 }
 @media (max-width: 1199px) {
   .about-us__header-wrapper h2 {
     font-size: 34px;
+    letter-spacing: 0.6px;
   }
 }
 @media (max-width: 767px) {
@@ -3642,18 +3661,19 @@ button,
   max-width: 500px;
 }
 .about-us__wrapper h3 {
-  font-family: "Manrope Light", "Arial", sans-serif;
+  font-family: "Manrope ExtraLight", "Arial", sans-serif;
   color: #316dc2;
   font-size: 32px;
   line-height: 36px;
   margin: 0;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   padding-bottom: 30px;
 }
 @media (max-width: 1199px) {
   .about-us__wrapper h3 {
     font-size: 28px;
     line-height: 28px;
+    letter-spacing: 0.6px;
   }
 }
 @media (max-width: 767px) {
@@ -3898,18 +3918,19 @@ button,
   padding: 0 100px 120px;
 }
 .programs h2 {
-  font-family: "Manrope Light", "Arial", sans-serif;
+  font-family: "Manrope ExtraLight", "Arial", sans-serif;
   color: #316dc2;
   font-size: 50px;
   line-height: 50px;
   margin: 0;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   max-width: 50%;
   padding-bottom: 50px;
 }
 @media (max-width: 1199px) {
   .programs h2 {
     font-size: 34px;
+    letter-spacing: 0.6px;
   }
 }
 @media (max-width: 767px) {
@@ -3980,7 +4001,7 @@ button,
   margin: 0 51px 20px 20px;
 }
 .programs__wrapper h3 {
-  font-family: "Manrope Regular", "Arial", sans-serif;
+  font-family: "Manrope Light", "Arial", sans-serif;
   color: #316dc2;
   font-size: 24px;
   line-height: 26px;
@@ -4294,15 +4315,15 @@ button,
 }
 .rules {
   background-color: #316dc2;
-  padding: 120px 100px 108px 100px;
+  padding: 121px 100px 106px 100px;
 }
 .rules h2 {
-  font-family: "Manrope Light", "Arial", sans-serif;
+  font-family: "Manrope ExtraLight", "Arial", sans-serif;
   color: #ffffff;
   font-size: 50px;
   line-height: 50px;
   margin: 0;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -4314,6 +4335,7 @@ button,
 @media (max-width: 1199px) {
   .rules h2 {
     font-size: 34px;
+    letter-spacing: 0.7px;
   }
 }
 @media (max-width: 767px) {
@@ -4348,12 +4370,12 @@ button,
   }
 }
 .rules h3 {
-  font-family: "Manrope Light", "Arial", sans-serif;
+  font-family: "Manrope ExtraLight", "Arial", sans-serif;
   color: #ffffff;
   font-size: 32px;
   line-height: 36px;
   margin: 0;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.6px;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -4361,12 +4383,13 @@ button,
   -ms-grid-row-span: 1;
   grid-row: 1/2;
   max-width: 500px;
-  padding: 10px 0 0;
+  padding: 6px 0 0;
 }
 @media (max-width: 1199px) {
   .rules h3 {
     font-size: 28px;
     line-height: 28px;
+    letter-spacing: 0.5px;
   }
 }
 @media (max-width: 767px) {
@@ -4399,13 +4422,13 @@ button,
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  -webkit-column-gap: 28px;
-     -moz-column-gap: 28px;
-          column-gap: 28px;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
 }
 
 .rules__list {
-  margin: 50px 108px 0 20px;
+  margin: 52px 108px 0 20px;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4440,8 +4463,8 @@ button,
   padding: 10px;
   border-radius: 30px;
   background-color: #316dc2;
-  top: -18px;
-  left: -28px;
+  top: -17px;
+  left: -30px;
   -webkit-transform: translateX(50%);
       -ms-transform: translateX(50%);
           transform: translateX(50%);
@@ -4538,18 +4561,19 @@ button,
   padding: 124px 100px 122px;
 }
 .news h2 {
-  font-family: "Manrope Light", "Arial", sans-serif;
+  font-family: "Manrope ExtraLight", "Arial", sans-serif;
   color: #316dc2;
   font-size: 50px;
   line-height: 50px;
   margin: 0;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   text-align: center;
   padding-bottom: 44px;
 }
 @media (max-width: 1199px) {
   .news h2 {
     font-size: 34px;
+    letter-spacing: 0.6px;
   }
 }
 @media (max-width: 767px) {
@@ -4756,7 +4780,7 @@ button,
   }
 }
 .news__item h3 {
-  font-family: "Manrope Regular", "Arial", sans-serif;
+  font-family: "Manrope Light", "Arial", sans-serif;
   color: #316dc2;
   font-size: 24px;
   line-height: 26px;
@@ -5097,18 +5121,19 @@ button,
   padding: 0 206px;
 }
 .faq h2 {
-  font-family: "Manrope Light", "Arial", sans-serif;
+  font-family: "Manrope ExtraLight", "Arial", sans-serif;
   color: #316dc2;
   font-size: 50px;
   line-height: 50px;
   margin: 0;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   text-align: center;
   padding-bottom: 66px;
 }
 @media (max-width: 1199px) {
   .faq h2 {
     font-size: 34px;
+    letter-spacing: 0.6px;
   }
 }
 @media (max-width: 767px) {
@@ -5146,9 +5171,9 @@ button,
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 .faq__item dt p {
@@ -5348,20 +5373,21 @@ button,
   }
 }
 .reviews {
-  padding: 122px 100px 120px;
+  padding: 126px 100px 120px;
 }
 .reviews h2 {
-  font-family: "Manrope Light", "Arial", sans-serif;
+  font-family: "Manrope ExtraLight", "Arial", sans-serif;
   color: #316dc2;
   font-size: 50px;
   line-height: 50px;
   margin: 0;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   padding-bottom: 44px;
 }
 @media (max-width: 1199px) {
   .reviews h2 {
     font-size: 34px;
+    letter-spacing: 0.6px;
   }
 }
 @media (max-width: 767px) {
@@ -5402,7 +5428,7 @@ button,
   }
 }
 .reviews__slide b {
-  font-family: "Manrope Regular", "Arial", sans-serif;
+  font-family: "Manrope Light", "Arial", sans-serif;
   color: #316dc2;
   font-size: 24px;
   line-height: 26px;
@@ -5626,6 +5652,10 @@ button,
   }
   .reviews__slide {
     min-width: 0;
+    padding: 48px 50px 7px;
+  }
+  .reviews__slide b {
+    margin: 23px 0 16px;
   }
 }
 @media (max-width: 767px) {
@@ -5691,20 +5721,21 @@ button,
 }
 .contacts {
   background-color: #316dc2;
-  padding: 120px 100px 120px;
+  padding: 122px 100px 120px;
 }
 .contacts h2 {
-  font-family: "Manrope Light", "Arial", sans-serif;
+  font-family: "Manrope ExtraLight", "Arial", sans-serif;
   color: #ffffff;
   font-size: 50px;
   line-height: 50px;
   margin: 0;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   max-width: 45%;
 }
 @media (max-width: 1199px) {
   .contacts h2 {
     font-size: 34px;
+    letter-spacing: 0.7px;
   }
 }
 @media (max-width: 767px) {
@@ -5811,11 +5842,27 @@ button,
   max-width: 268px;
 }
 
+.contacts__map-container {
+  margin: 34px auto 0;
+  border-radius: 16px;
+  position: relative;
+  width: 100%;
+}
+.contacts__map-container::before {
+  position: absolute;
+  content: "";
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  opacity: 0.2;
+  background-color: #ffffff;
+}
+
 .contacts__map {
+  border-radius: 16px;
   width: 100%;
   height: 500px;
-  margin: 32px auto 0;
-  border-radius: 16px;
   background-image: url("../img/map.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -5848,11 +5895,14 @@ button,
     opacity: 0.2;
     background-color: #ffffff;
   }
+  .contacts__map-container {
+    margin: 0;
+  }
+  .contacts__map-container::before {
+    display: none;
+  }
   .contacts__list dt {
     padding-bottom: 18px;
-  }
-  .contacts__map {
-    margin: 0;
   }
 }
 @media (max-width: 767px) {
@@ -5888,7 +5938,6 @@ button,
     max-width: none;
   }
   .contacts__map {
-    margin: 0;
     height: 240px;
   }
 }
@@ -5896,18 +5945,19 @@ button,
   padding: 120px 100px 60px;
 }
 .feedback h3 {
-  font-family: "Manrope Light", "Arial", sans-serif;
+  font-family: "Manrope ExtraLight", "Arial", sans-serif;
   color: #ffffff;
   font-size: 32px;
   line-height: 36px;
   margin: 0;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.6px;
   padding-bottom: 26px;
 }
 @media (max-width: 1199px) {
   .feedback h3 {
     font-size: 28px;
     line-height: 28px;
+    letter-spacing: 0.5px;
   }
 }
 @media (max-width: 767px) {

@@ -1,6 +1,6 @@
 .contacts {
   background-color: $color-cerulean-blue;
-  padding: 120px 100px 120px;
+  padding: 122px 100px 120px;
 
   h2 {
     @include text-h2--white;
@@ -64,11 +64,28 @@
   max-width: 268px;
 }
 
+.contacts__map-container {
+  margin: 34px auto 0;
+  border-radius: 16px;
+  position: relative;
+  width: 100%;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    opacity: 0.2;
+    background-color: $color-default-white;
+  }
+}
+
 .contacts__map {
+  border-radius: 16px;
   width: 100%;
   height: 500px;
-  margin: 32px auto 0;
-  border-radius: 16px;
   background-image: url("../img/map.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -105,12 +122,16 @@
     background-color: $color-default-white;
   }
 
-  .contacts__list dt {
-    padding-bottom: 18px;
+  .contacts__map-container {
+    margin: 0;
+
+    &::before {
+      display: none;
+    }
   }
 
-  .contacts__map {
-    margin: 0;
+  .contacts__list dt {
+    padding-bottom: 18px;
   }
 }
 
@@ -147,7 +168,6 @@
   }
 
   .contacts__map {
-    margin: 0;
     height: 240px;
   }
 }

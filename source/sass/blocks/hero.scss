@@ -9,6 +9,7 @@
     padding: 40px 50px 30px;
     max-width: 968px;
     top: -0.6px;
+    min-height: 194px;
   }
 
   p {
@@ -27,6 +28,7 @@
   border-radius: 0 0 30px 30px;
   padding: 0 50px 18px;
   max-width: 772px;
+  min-height: 89px;
   position: relative;
   top: -2px;
 
@@ -140,6 +142,7 @@
   .hero h1 {
     padding: 30px 40px 20px;
     max-width: 659px;
+    min-height: 142px;
   }
 
   .hero__slide {
@@ -174,6 +177,7 @@
   .hero__description {
     padding: 0 40px 30px;
     max-width: 591px;
+    min-height: 89px;
   }
 
   .hero__description p {
@@ -193,6 +197,7 @@
   .hero h1 {
     padding: 20px 14px 10px;
     border-radius: 0 16px 16px 0;
+    min-height: 114px;
   }
 
   .hero__pagination {
@@ -214,6 +219,8 @@
   .hero__description {
     padding: 0;
     background-color: transparent;
+    min-height: 147px;
+    align-items: stretch;
 
     &::before {
       display: none;

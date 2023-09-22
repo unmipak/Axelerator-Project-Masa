@@ -1,5 +1,5 @@
 .reviews {
-  padding: 122px 100px 120px;
+  padding: 126px 100px 120px;
 
   h2 {
     @include text-h2;
@@ -115,6 +115,11 @@
 
   .reviews__slide {
     min-width: 0;
+    padding: 48px 50px 7px;
+  }
+
+  .reviews__slide b {
+    margin: 23px 0 16px;
   }
 }
 

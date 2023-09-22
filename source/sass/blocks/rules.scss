@@ -1,6 +1,6 @@
 .rules {
   background-color: $color-cerulean-blue;
-  padding: 120px 100px 108px 100px;
+  padding: 121px 100px 106px 100px;
 
   h2 {
     @include text-h2--white;
@@ -21,7 +21,7 @@
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     max-width: 500px;
-    padding: 10px 0 0;
+    padding: 6px 0 0;
   }
 
   picture {
@@ -42,11 +42,11 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 28px;
+  column-gap: 30px;
 }
 
 .rules__list {
-  margin: 50px 108px 0 20px;
+  margin: 52px 108px 0 20px;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -72,8 +72,8 @@
     padding: 10px;
     border-radius: 30px;
     background-color: $color-cerulean-blue;
-    top: -18px;
-    left: -28px;
+    top: -17px;
+    left: -30px;
     transform: translateX(50%);
     content: counter(item);
     counter-increment: item;
