@@ -3058,7 +3058,7 @@ button,
 .header__nav-list-btn {
   display: block;
   margin: 0;
-  padding: 0 10px 0 0;
+  padding: 0 26px 0 0;
   font-family: "Manrope Medium", "Arial", sans-serif;
   color: #ffffff;
   font-size: 16px;
@@ -3075,7 +3075,7 @@ button,
 .header__nav-list-btn::before {
   content: "";
   position: absolute;
-  right: -15px;
+  right: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
@@ -4961,7 +4961,7 @@ button,
 }
 @media (max-width: 1199px) {
   .news {
-    padding: 100px 45px 107px;
+    padding: 100px 45px 100px;
   }
   .news h2 {
     padding-bottom: 29px;
@@ -5136,7 +5136,6 @@ button,
 }
 
 .faq__item {
-  padding: 40px;
   border: 1px solid #316dc2;
   border-radius: 16px;
 }
@@ -5147,9 +5146,9 @@ button,
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 100%;
 }
 .faq__item dt p {
@@ -5199,8 +5198,12 @@ button,
   }
 }
 
-.faq__item:nth-of-type(4),
-.faq__item:nth-of-type(5) {
+.faq__item-clickable-wrapper {
+  padding: 40px;
+}
+
+.faq__item:nth-of-type(4) .faq__item-clickable-wrapper,
+.faq__item:nth-of-type(5) .faq__item-clickable-wrapper {
   padding: 32px 40px;
 }
 
@@ -5230,6 +5233,8 @@ button,
 
 .faq__item.is-active {
   background-color: #316dc2;
+}
+.faq__item.is-active .faq__item-clickable-wrapper {
   padding: 40px 40px 34px;
 }
 .faq__item.is-active dt p {
@@ -5302,14 +5307,16 @@ button,
     padding-bottom: 40px;
   }
   .faq__item {
-    padding: 30px;
     min-height: 100px;
   }
-  .faq__item:nth-of-type(4),
-.faq__item:nth-of-type(5) {
+  .faq__item-clickable-wrapper {
+    padding: 30px;
+  }
+  .faq__item:nth-of-type(4) .faq__item-clickable-wrapper,
+.faq__item:nth-of-type(5) .faq__item-clickable-wrapper {
     padding: 20px 30px;
   }
-  .faq__item.is-active {
+  .faq__item.is-active .faq__item-clickable-wrapper {
     padding: 30px;
   }
 }
@@ -5322,14 +5329,16 @@ button,
   }
   .faq__item {
     min-height: 0;
+  }
+  .faq__item-clickable-wrapper {
     padding: 20px 15px;
   }
-  .faq__item.is-active {
-    padding: 20px 15px;
-  }
-  .faq__item:nth-of-type(4),
-.faq__item:nth-of-type(5) {
+  .faq__item:nth-of-type(4) .faq__item-clickable-wrapper,
+.faq__item:nth-of-type(5) .faq__item-clickable-wrapper {
     padding: 18px 15px;
+  }
+  .faq__item.is-active .faq__item-clickable-wrapper {
+    padding: 20px 15px;
   }
   .faq__item dt p {
     max-width: 85%;
