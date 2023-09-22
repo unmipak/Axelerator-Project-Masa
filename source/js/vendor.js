@@ -8,6 +8,7 @@ Swiper.use([Navigation, Pagination]);
 const sliderHero = new Swiper('.hero', {
   loop: true,
   slidesPerView: 1,
+  preventInteractionOnTransition: true,
   autoplay: {
     delay: 3000,
   },
