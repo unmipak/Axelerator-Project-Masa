@@ -463,24 +463,26 @@
             <h2>Отзывы</h2>
             <div class="swiper-wrapper">
               <div class="reviews__slide swiper-slide">
-                <div class="reviews__user-info">
-                  <picture>
-                    <source type="image/webp" srcset="./img/photo-review-1.webp">
-                    <img class="reviews__picture" src="./img/photo-review-1.jpg" width="90" height="90"
-                      alt="Фото пользователя">
-                  </picture>
-                  <h3>Сара <br> Аврахам</h3>
+                <div class="reviews__header-container">
+                  <div class="reviews__user-info">
+                    <picture>
+                      <source type="image/webp" srcset="./img/photo-review-1.webp">
+                      <img class="reviews__picture" src="./img/photo-review-1.jpg" width="90" height="90"
+                        alt="Фото пользователя">
+                    </picture>
+                    <h3>Сара <br> Аврахам</h3>
+                  </div>
+                  <dl class="reviews__info">
+                    <div class="reviews__program">
+                      <dt>Программа</dt>
+                      <dd>Masa Art Challenge</dd>
+                    </div>
+                    <div class="reviews__date">
+                      <dt>Дата</dt>
+                      <dd>Осень 2022</dd>
+                    </div>
+                  </dl>
                 </div>
-                <dl class="reviews__info">
-                  <div class="reviews__program">
-                    <dt>Программа</dt>
-                    <dd>Masa Art Challenge</dd>
-                  </div>
-                  <div class="reviews__date">
-                    <dt>Дата</dt>
-                    <dd>Осень 2022</dd>
-                  </div>
-                </dl>
                 <b>Я&nbsp;могу с&nbsp;уверенностью сказать, что это был один из&nbsp;самых незабываемых опытов
                   в&nbsp;жизни!</b>
                 <p>Я&nbsp;рекомендую программу &laquo;Маса&raquo; всем израильским студентам, желающим получить
@@ -490,24 +492,26 @@
                   чувствую огромную благодарность за&nbsp;предоставленную мне возможность.</p>
               </div>
               <div class="reviews__slide swiper-slide">
-                <div class="reviews__user-info">
-                  <picture>
-                    <source type="image/webp" srcset="./img/photo-review-2.webp">
-                    <img class="reviews__picture" src="./img/photo-review-2.jpg" width="90" height="90"
-                      alt="Фото пользователя">
-                  </picture>
-                  <h3>Давид <br> Иммервар</h3>
+                <div class="reviews__header-container">
+                  <div class="reviews__user-info">
+                    <picture>
+                      <source type="image/webp" srcset="./img/photo-review-2.webp">
+                      <img class="reviews__picture" src="./img/photo-review-2.jpg" width="90" height="90"
+                        alt="Фото пользователя">
+                    </picture>
+                    <h3>Давид <br> Иммервар</h3>
+                  </div>
+                  <dl class="reviews__info">
+                    <div class="reviews__program">
+                      <dt>Программа</dt>
+                      <dd>Volunteer Chance</dd>
+                    </div>
+                    <div class="reviews__date">
+                      <dt>Дата</dt>
+                      <dd>Лето 2022</dd>
+                    </div>
+                  </dl>
                 </div>
-                <dl class="reviews__info">
-                  <div class="reviews__program">
-                    <dt>Программа</dt>
-                    <dd>Volunteer Chance</dd>
-                  </div>
-                  <div class="reviews__date">
-                    <dt>Дата</dt>
-                    <dd>Лето 2022</dd>
-                  </div>
-                </dl>
                 <b>Благодаря опыту стажировки я&nbsp;узнал так много нового о&nbsp;себе и&nbsp;об&nbsp;окружающем
                   мире.</b>
                 <p>Каждый день был возможностью оказать ощутимое влияние на&nbsp;жизнь других людей. Я&nbsp;бы очень
@@ -720,7 +724,8 @@
           <input type="tel" name="tel" id="tel-modal" aria-label="Телефон" required>
           <label for="tel">Телефон</label>
         </div>
-        <div class="custom-select custom-select--light" data-select data-validate-type="select" data-required data-required="true">
+        <div class="custom-select custom-select--light" data-select data-validate-type="select" data-required
+          data-required="true">
           <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
             <span class="custom-select__text"></span>
             <span class="custom-select__icon"></span>

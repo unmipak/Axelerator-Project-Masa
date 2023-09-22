@@ -3775,9 +3775,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-column-gap: 20px;
      -moz-column-gap: 20px;
           column-gap: 20px;
@@ -5368,18 +5368,7 @@ button,
 }
 
 .reviews__slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 50px 50px 46px;
+  padding: 50px 50px 6px;
   border: 1px solid #316dc2;
   border-radius: 16px;
   height: auto;
@@ -5409,7 +5398,7 @@ button,
   font-size: 24px;
   line-height: 26px;
   margin: 0;
-  width: 100%;
+  display: block;
   margin: 26px 0 14px;
 }
 @media (max-width: 1199px) {
@@ -5430,7 +5419,7 @@ button,
   font-size: 16px;
   line-height: 26px;
   margin: 0;
-  width: 100%;
+  display: block;
 }
 @media (max-width: 1199px) {
   .reviews__slide p {
@@ -5442,6 +5431,20 @@ button,
     font-size: 14px;
     line-height: 20px;
   }
+}
+
+.reviews__header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .reviews__user-info {
@@ -6087,9 +6090,7 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-column-gap: 20px;
-     -moz-column-gap: 20px;
-          column-gap: 20px;
+  gap: 20px;
   margin: 0;
   padding: 0;
   -webkit-box-align: center;
@@ -6133,9 +6134,7 @@ button,
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    -webkit-column-gap: 10px;
-       -moz-column-gap: 10px;
-            column-gap: 10px;
+    gap: 10px;
   }
 }
 @media (max-width: 767px) {

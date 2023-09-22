@@ -13,11 +13,7 @@
 }
 
 .reviews__slide {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px 50px 46px;
+  padding: 50px 50px 6px;
   border: 1px solid $color-cerulean-blue;
   border-radius: 16px;
   height: auto;
@@ -29,14 +25,21 @@
 
   b {
     @include text-h5;
-    width: 100%;
+    display: block;
     margin: 26px 0 14px;
   }
 
   p {
     @include text-regular;
-    width: 100%;
+    display: block;
   }
+}
+
+.reviews__header-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .reviews__user-info {
