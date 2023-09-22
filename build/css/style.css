@@ -802,7 +802,7 @@ button.swiper-pagination-bullet {
 
 /* Progress */
 .swiper-pagination-progressbar {
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(49, 109, 194, 0.2);
   position: absolute;
 }
 
