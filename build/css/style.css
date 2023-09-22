@@ -4282,7 +4282,7 @@ button,
 }
 .rules {
   background-color: #316dc2;
-  padding: 120px 210px 108px 100px;
+  padding: 120px 100px 108px 100px;
 }
 .rules h2 {
   font-family: "Manrope Light", "Arial", sans-serif;
@@ -4322,6 +4322,7 @@ button,
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
+  max-width: 500px;
 }
 @media (max-width: 1199px) {
   .rules p {
@@ -4386,13 +4387,13 @@ button,
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  -webkit-column-gap: 138px;
-     -moz-column-gap: 138px;
-          column-gap: 138px;
+  -webkit-column-gap: 28px;
+     -moz-column-gap: 28px;
+          column-gap: 28px;
 }
 
 .rules__list {
-  margin: 50px 0 0 20px;
+  margin: 50px 108px 0 20px;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4454,6 +4455,7 @@ button,
   }
   .rules p {
     padding-bottom: 0;
+    max-width: none;
   }
   .rules__picture {
     width: 100%;
