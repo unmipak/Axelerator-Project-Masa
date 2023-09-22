@@ -733,10 +733,6 @@ button.swiper-pagination-bullet {
   cursor: pointer;
 }
 
-.swiper-pagination-bullet:only-child {
-  display: none !important;
-}
-
 .swiper-pagination-bullet-active {
   opacity: var(--swiper-pagination-bullet-opacity, 1);
   background: #316DC2;
@@ -2239,6 +2235,10 @@ button,
   border: 1px solid #ffffff;
   border-radius: 30px;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .btn--dark::before {
   position: absolute;
@@ -2882,7 +2882,7 @@ button,
   opacity: 1;
 }
 .custom-select:hover .custom-select__button, .custom-select:focus-within .custom-select__button, .custom-select:focus-visible .custom-select__button {
-  border: 1px solid #484848;
+  border: 1px solid #ffffff;
 }
 .custom-select.is-disabled {
   pointer-events: none;

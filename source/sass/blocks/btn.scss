@@ -83,6 +83,7 @@
   border: 1px solid $color-default-white;
   border-radius: 30px;
   cursor: pointer;
+  user-select: none;
 
   &::before {
     position: absolute;

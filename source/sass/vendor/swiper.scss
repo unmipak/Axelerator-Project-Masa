@@ -304,9 +304,6 @@ button.swiper-pagination-bullet {
 .swiper-pagination-clickable .swiper-pagination-bullet {
   cursor: pointer;
 }
-.swiper-pagination-bullet:only-child {
-  display: none !important;
-}
 .swiper-pagination-bullet-active {
   opacity: var(--swiper-pagination-bullet-opacity, 1);
   background: #316DC2;
