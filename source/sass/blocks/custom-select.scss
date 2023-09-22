@@ -183,6 +183,11 @@
       opacity: 1;
     }
   }
+
+  &.is-invalid .custom-select__button {
+    border: 1px solid $color-wild-watermelon;
+    background: rgba(255, 94, 102, 0.2);
+  }
 }
 
 .custom-select--light {
@@ -197,8 +202,20 @@
     border: 1px solid rgba(72, 72, 72, 0.3);
   }
 
+  &:hover,
+  &:focus-within,
+  &:focus-visible {
+    .custom-select__button {
+      border: 1px solid $color-charcoal;
+    }
+  }
+
   .custom-select__text {
     color: $color-charcoal;
+  }
+
+  .custom-select__icon {
+    background-color: $color-charcoal;
   }
 }
 

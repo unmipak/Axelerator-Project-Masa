@@ -67,6 +67,7 @@
     display: flex;
     align-items: center;
     user-select: none;
+    cursor: pointer;
   }
 
   .custom-input__checkbox + label::before {
@@ -82,6 +83,7 @@
     background-repeat: no-repeat;
     background-size: 8px;
     left: -10px;
+    cursor: pointer;
   }
 
   .custom-input__checkbox:checked + label {
@@ -193,6 +195,12 @@
   .custom-input__checkbox:checked:disabled + label {
     background-image: url("../img/stack.svg#tick-white");
     background-color: $color-mischka;
+  }
+
+  &.is-invalid {
+    .custom-input__checkbox + label::before {
+      border: 1px solid $color-wild-watermelon;
+    }
   }
 }
 

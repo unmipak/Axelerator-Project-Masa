@@ -2592,6 +2592,7 @@ button,
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  cursor: pointer;
 }
 .custom-input .custom-input__checkbox + label::before {
   content: "";
@@ -2606,6 +2607,7 @@ button,
   background-repeat: no-repeat;
   background-size: 8px;
   left: -10px;
+  cursor: pointer;
 }
 .custom-input .custom-input__checkbox:checked + label {
   opacity: 1;
@@ -2650,14 +2652,14 @@ button,
 }
 .custom-input.is-invalid input,
 .custom-input.is-invalid textarea {
-  border: 1px solid #ff5e66;
+  border: 1px solid rgba(255, 94, 102, 0.7);
   background: rgba(255, 94, 102, 0.2);
   opacity: 1;
 }
 .custom-input.is-invalid input:focus, .custom-input.is-invalid input:hover,
 .custom-input.is-invalid textarea:focus,
 .custom-input.is-invalid textarea:hover {
-  border: 1px solid #ff5e66;
+  border: 1px solid rgba(255, 94, 102, 0.7);
   opacity: 1;
 }
 .custom-input.is-invalid input[type=checkbox] {
@@ -2665,7 +2667,7 @@ button,
 }
 .custom-input.is-invalid label::before {
   background-image: none;
-  border: 1px solid #ff5e66;
+  border: 1px solid rgba(255, 94, 102, 0.7);
   background-color: rgba(255, 94, 102, 0.2);
 }
 
@@ -2702,6 +2704,9 @@ button,
 .custom-input--light .custom-input__checkbox:checked:disabled + label {
   background-image: url("../img/stack.svg#tick-white");
   background-color: #a9afb7;
+}
+.custom-input--light.is-invalid .custom-input__checkbox + label::before {
+  border: 1px solid rgba(255, 94, 102, 0.7);
 }
 
 @media (max-width: 767px) {
@@ -2915,6 +2920,10 @@ button,
 .custom-select.slide-up.not-empty .custom-select__text, .custom-select.slide-up.is-open .custom-select__text {
   opacity: 1;
 }
+.custom-select.is-invalid .custom-select__button {
+  border: 1px solid rgba(255, 94, 102, 0.7);
+  background: rgba(255, 94, 102, 0.2);
+}
 
 .custom-select--light {
   margin: 0;
@@ -2926,8 +2935,14 @@ button,
   color: #484848;
   border: 1px solid rgba(72, 72, 72, 0.3);
 }
+.custom-select--light:hover .custom-select__button, .custom-select--light:focus-within .custom-select__button, .custom-select--light:focus-visible .custom-select__button {
+  border: 1px solid #484848;
+}
 .custom-select--light .custom-select__text {
   color: #484848;
+}
+.custom-select--light .custom-select__icon {
+  background-color: #484848;
 }
 
 @media (max-width: 767px) {
