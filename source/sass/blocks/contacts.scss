@@ -4,7 +4,7 @@
 
   h2 {
     @include text-h2--white;
-    max-width: 50%;
+    max-width: 45%;
   }
 }
 
@@ -19,11 +19,12 @@
 
 .contacts__list {
   margin: -2px 0 40px;
-  max-width: 50%;
+  max-width: 55%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   column-gap: 51px;
+  row-gap: 10px;
 
   dt {
     font-family: $font-regular;
@@ -72,6 +73,12 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
+}
+
+@include vp-1439 {
+  .contacts__list {
+    gap: 10px;
+  }
 }
 
 @include vp-1199 {

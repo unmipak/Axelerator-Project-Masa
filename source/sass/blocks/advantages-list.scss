@@ -49,6 +49,12 @@
   }
 }
 
+@include vp-1439 {
+  .advantages-list {
+    padding: 90px 40px 55px;
+  }
+}
+
 @include vp-1199 {
   .advantages-list {
     display: grid;

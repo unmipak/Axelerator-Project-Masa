@@ -3090,6 +3090,10 @@ button,
   -webkit-clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
           clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
 }
+.header__nav-list-btn:hover, .header__nav-list-btn:focus-visible, .header__nav-list-btn:active {
+  outline: none;
+  opacity: 1;
+}
 
 .header__nav-link {
   display: block;
@@ -3117,7 +3121,7 @@ button,
       -ms-transform: translateY(-50%) rotate(180deg);
           transform: translateY(-50%) rotate(180deg);
 }
-.header__nav-item.is-active p {
+.header__nav-item.is-active .header__nav-list-btn {
   opacity: 1;
 }
 .header__nav-item.is-active .header__nav-sub-list {
@@ -3246,6 +3250,9 @@ button,
   .header__nav--opened {
     right: 15px;
     width: calc(100% - 30px);
+  }
+  .header__nav-list {
+    width: 100%;
   }
 }
 .hero {
@@ -3821,6 +3828,11 @@ button,
   }
 }
 
+@media (max-width: 1439px) {
+  .advantages-list {
+    padding: 90px 40px 55px;
+  }
+}
 @media (max-width: 1199px) {
   .advantages-list {
     display: -ms-grid;
@@ -5674,7 +5686,7 @@ button,
   line-height: 50px;
   margin: 0;
   letter-spacing: 0.5px;
-  max-width: 50%;
+  max-width: 45%;
 }
 @media (max-width: 1199px) {
   .contacts h2 {
@@ -5706,7 +5718,7 @@ button,
 
 .contacts__list {
   margin: -2px 0 40px;
-  max-width: 50%;
+  max-width: 55%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5718,6 +5730,7 @@ button,
   -webkit-column-gap: 51px;
      -moz-column-gap: 51px;
           column-gap: 51px;
+  row-gap: 10px;
 }
 .contacts__list dt {
   font-family: "Manrope Regular", "Arial", sans-serif;
@@ -5795,6 +5808,11 @@ button,
   background-size: 100%;
 }
 
+@media (max-width: 1439px) {
+  .contacts__list {
+    gap: 10px;
+  }
+}
 @media (max-width: 1199px) {
   .contacts {
     padding: 100px 45px;

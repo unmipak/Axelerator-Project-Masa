@@ -85,6 +85,13 @@
     transition: transform 0.3s ease;
     clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
   }
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    outline: none;
+    opacity: 1;
+  }
 }
 
 .header__nav-link {
@@ -116,7 +123,7 @@
     transform: translateY(-50%) rotate(180deg);
   }
 
-  p {
+  .header__nav-list-btn      {
     opacity: 1;
   }
 
@@ -258,5 +265,9 @@
   .header__nav--opened {
     right: 15px;
     width: calc(100% - 30px);
+  }
+
+  .header__nav-list {
+    width: 100%;
   }
 }
