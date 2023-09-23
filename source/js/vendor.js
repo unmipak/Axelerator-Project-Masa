@@ -16,6 +16,17 @@ const sliderHero = new Swiper('.hero', {
     el: '.hero__pagination',
     clickable: true,
   },
+  breakpoints: {
+    320: {
+      allowTouchMove: true,
+    },
+    768: {
+      allowTouchMove: true,
+    },
+    1200: {
+      allowTouchMove: false,
+    },
+  },
 });
 
 const sliderPrograms = new Swiper('.programs__slider', {
