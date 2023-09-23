@@ -1,5 +1,5 @@
 .news {
-  padding: 124px 100px 122px;
+  padding: 124px 85px 122px 100px;
 
   h2 {
     @include text-h2;
@@ -28,6 +28,7 @@
   border-radius: 20px;
   cursor: pointer;
   user-select: none;
+  background-color: transparent;
 
   &:hover,
   &:focus-visible {

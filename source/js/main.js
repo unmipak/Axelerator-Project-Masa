@@ -1,5 +1,5 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
+import {modals, initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {accordions, initAccordions} from './vendor/init-accordion';
 import {initNewsBtns, setMap} from './vendor';
@@ -71,4 +71,20 @@ overlay.addEventListener('click', function () {
     overlay.classList.remove('wrapper-overlay--menu-opened');
     accordions.closeAllAccordion(navList);
   }
+});
+
+let modal = document.querySelector('.modal');
+
+modal.addEventListener('click', (evt) => {
+  const target = evt.target;
+  if (!target.closest('.modal__wrapper') && !target.closest('.modal__btn-close')) {
+    modals.close('Форма обратной связи');
+  }
+});
+
+let modalBtnOpen = document.querySelector('[data-open-modal]');
+let modalNameInput = document.getElementById('name-modal');
+
+modalBtnOpen.addEventListener('click', function () {
+  modalNameInput.focus();
 });
