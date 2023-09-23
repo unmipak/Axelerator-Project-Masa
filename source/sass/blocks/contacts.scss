@@ -69,6 +69,7 @@
   border-radius: 16px;
   position: relative;
   width: 100%;
+  overflow: hidden;
 
   &::before {
     position: absolute;

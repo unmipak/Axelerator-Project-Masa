@@ -4283,12 +4283,10 @@ button,
     display: none;
   }
   .programs__btn-wrapper {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
     -webkit-column-gap: 7px;
        -moz-column-gap: 7px;
             column-gap: 7px;
+    margin: 0;
   }
   .programs__slider {
     display: -webkit-box;
@@ -4301,12 +4299,11 @@ button,
         flex-wrap: wrap;
   }
   .programs__slider-navigation {
-    margin: 0;
+    margin: 0 0 0 auto;
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
     max-width: 52px;
-    margin-left: auto;
   }
   .programs__wrapper {
     margin: 18px 10px;
@@ -5822,6 +5819,7 @@ button,
   border-radius: 16px;
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 .contacts__map-container::before {
   position: absolute;
