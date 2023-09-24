@@ -45,7 +45,7 @@ const sliderPrograms = new Swiper('.programs__slider', {
     },
     768: {
       slidesPerView: 2.12,
-      spaceBetween: 32,
+      spaceBetween: 30,
       centerInsufficientSlides: true,
     },
     1200: {

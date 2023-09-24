@@ -58,8 +58,9 @@
   h3 {
     @include text-h5;
     background-color: $color-default-white;
-    padding: 18px 18px 0;
+    padding: 14px 18px 2px;
     min-width: 194px;
+    min-height: 41px;
     width: fit-content;
     border-radius: 12px 12px 0 0;
     position: relative;
@@ -192,12 +193,14 @@
   }
 
   .programs__wrapper h3 {
-    padding: 10px 10px 0 18px;
+    padding: 12px 10px 0 18px;
     min-width: 173px;
+    min-height: 38px;
   }
 
   .programs__link-wrapper {
     padding: 0 18px;
+    min-height: 77px;
   }
 }
 
@@ -211,6 +214,12 @@
     order: -2;
     max-width: 50%;
     padding-bottom: 30px;
+  }
+
+  .programs h3 {
+    min-width: 146px;
+    min-height: 0;
+    padding: 16px 10px 6px 18px;
   }
 
   .programs__btn {
@@ -245,5 +254,9 @@
 
   .programs__wrapper {
     margin: 18px 10px;
+  }
+
+  .programs__link-wrapper {
+    min-height: 69px;
   }
 }

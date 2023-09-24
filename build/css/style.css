@@ -3261,6 +3261,9 @@ button,
   .header__nav-list {
     width: 100%;
   }
+  .header__logo {
+    padding: 12px;
+  }
 }
 .hero {
   width: 100%;
@@ -3276,7 +3279,7 @@ button,
   background-color: #ffffff;
   border-radius: 0 30px 30px 0;
   padding: 40px 50px 30px;
-  max-width: 968px;
+  width: 968px;
   top: -0.6px;
   min-height: 194px;
 }
@@ -3321,14 +3324,14 @@ button,
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-color: #ffffff;
   border-radius: 0 0 30px 30px;
-  padding: 0 50px 18px;
+  padding: 0 50px 20px;
   max-width: 772px;
   min-height: 89px;
   position: relative;
@@ -3417,7 +3420,7 @@ button,
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 8px 16px;
+  padding: 7px 14px;
   border-radius: 20px 20px 0 0;
 }
 .hero__pagination::before {
@@ -3452,9 +3455,10 @@ button,
 
 @media (max-width: 1199px) {
   .hero h1 {
-    padding: 30px 40px 20px;
+    padding: 30px 30px 20px 40px;
     max-width: 659px;
-    min-height: 142px;
+    width: auto;
+    min-height: 140px;
   }
   .hero__slide {
     padding: 30px 45px 60px;
@@ -3508,14 +3512,14 @@ button,
 }
 @media (max-width: 1199px) {
   .hero__btn {
-    margin-top: -16px;
+    margin-top: 3px;
   }
 }
 @media (max-width: 767px) {
   .hero h1 {
-    padding: 20px 14px 10px;
+    padding: 20px 14px 10px 14px;
     border-radius: 0 16px 16px 0;
-    min-height: 114px;
+    min-height: 100px;
   }
   .hero__pagination {
     padding: 4px 10px 4px;
@@ -3533,7 +3537,7 @@ button,
   .hero__description {
     padding: 0;
     background-color: transparent;
-    min-height: 147px;
+    min-height: 0;
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
@@ -4006,8 +4010,9 @@ button,
   line-height: 26px;
   margin: 0;
   background-color: #ffffff;
-  padding: 18px 18px 0;
+  padding: 14px 18px 2px;
   min-width: 194px;
+  min-height: 41px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -4248,11 +4253,13 @@ button,
     margin: 20px 41px 20px 20px;
   }
   .programs__wrapper h3 {
-    padding: 10px 10px 0 18px;
+    padding: 12px 10px 0 18px;
     min-width: 173px;
+    min-height: 38px;
   }
   .programs__link-wrapper {
     padding: 0 18px;
+    min-height: 77px;
   }
 }
 @media (max-width: 767px) {
@@ -4266,6 +4273,11 @@ button,
             order: -2;
     max-width: 50%;
     padding-bottom: 30px;
+  }
+  .programs h3 {
+    min-width: 146px;
+    min-height: 0;
+    padding: 16px 10px 6px 18px;
   }
   .programs__btn {
     -webkit-box-ordinal-group: 2;
@@ -4307,6 +4319,9 @@ button,
   }
   .programs__wrapper {
     margin: 18px 10px;
+  }
+  .programs__link-wrapper {
+    min-height: 69px;
   }
 }
 .rules {
@@ -4994,6 +5009,11 @@ button,
   .news h2 {
     padding-bottom: 24px;
   }
+  .news h3 {
+    min-width: 200px;
+    min-height: 50px;
+    padding: 10px 18px 0 0;
+  }
   .news__filters {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -5017,7 +5037,8 @@ button,
     -webkit-column-gap: 10px;
        -moz-column-gap: 10px;
             column-gap: 10px;
-    padding: 6px 10px 10px 0;
+    padding: 12px 10px 12px 0;
+    min-width: 263px;
   }
   .news__item--main p {
     max-width: 213px;
@@ -5087,6 +5108,11 @@ button,
 @media (max-width: 767px) {
   .news__picture {
     display: none;
+  }
+}
+@media (max-width: 767px) {
+  .news__info span {
+    padding: 10px 13px 6px 0;
   }
 }
 .faq {
