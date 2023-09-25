@@ -9,6 +9,9 @@ const sliderHero = new Swiper('.hero', {
   loop: true,
   slidesPerView: 1,
   preventInteractionOnTransition: true,
+  hashNavigation: {
+    watchState: true,
+  },
   autoplay: {
     delay: 3000,
   },

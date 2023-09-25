@@ -49,6 +49,7 @@
 
 .hero__btn {
   max-width: 196px;
+  display: none;
 }
 
 .hero__slide {
@@ -106,6 +107,7 @@
   width: fit-content;
   padding: 7px 14px;
   border-radius: 20px 20px 0 0;
+  display: none;
 
   &::before {
     position: absolute;
@@ -127,8 +129,8 @@
     border: 1px solid $color-cerulean-blue;
   }
 
-  .swiper-pagination-bullet:hover,
   .swiper-pagination-bullet:focus-visible {
+    background-color: $color-cerulean-blue;
     outline: none;
   }
 }
@@ -136,6 +138,13 @@
 .swiper-horizontal > .hero__pagination .swiper-pagination-bullet,
 .swiper-pagination-horizontal.hero__pagination .swiper-pagination-bullet {
   margin: 0 6px;
+}
+
+.hero__slide.swiper-slide-active {
+  .hero__btn,
+  .hero__pagination {
+    display: block;
+  }
 }
 
 @include vp-1199 {

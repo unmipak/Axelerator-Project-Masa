@@ -3355,6 +3355,7 @@ button,
 
 .hero__btn {
   max-width: 196px;
+  display: none;
 }
 
 .hero__slide {
@@ -3422,6 +3423,7 @@ button,
   width: fit-content;
   padding: 7px 14px;
   border-radius: 20px 20px 0 0;
+  display: none;
 }
 .hero__pagination::before {
   position: absolute;
@@ -3443,14 +3445,19 @@ button,
   height: 10px;
   border: 1px solid #316dc2;
 }
-.hero__pagination .swiper-pagination-bullet:hover,
 .hero__pagination .swiper-pagination-bullet:focus-visible {
+  background-color: #316dc2;
   outline: none;
 }
 
 .swiper-horizontal > .hero__pagination .swiper-pagination-bullet,
 .swiper-pagination-horizontal.hero__pagination .swiper-pagination-bullet {
   margin: 0 6px;
+}
+
+.hero__slide.swiper-slide-active .hero__btn,
+.hero__slide.swiper-slide-active .hero__pagination {
+  display: block;
 }
 
 @media (max-width: 1199px) {
