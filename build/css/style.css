@@ -2729,7 +2729,7 @@ button,
     row-gap: 12px;
   }
   .custom-input input {
-    padding: 12px 20px;
+    padding: 14px 20px;
   }
   .custom-input textarea {
     min-height: 92px;
@@ -2966,9 +2966,6 @@ button,
   }
   .custom-select--light .custom-select__label {
     font-size: 14px;
-  }
-  .custom-select__button {
-    height: 44px;
   }
 }
 .header {
@@ -6117,7 +6114,7 @@ button,
     padding: 50px 15px;
   }
   .feedback__form {
-    gap: 25px;
+    gap: 22px;
   }
   .feedback__btn {
     margin-top: 10px;
@@ -6191,7 +6188,7 @@ button,
     -webkit-column-gap: 30px;
        -moz-column-gap: 30px;
             column-gap: 30px;
-    row-gap: 4px;
+    row-gap: 5px;
   }
 }
 .social-list {
