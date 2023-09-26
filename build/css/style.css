@@ -4277,9 +4277,9 @@ button,
     position: relative;
   }
   .programs h2 {
-    -webkit-box-ordinal-group: -1;
-        -ms-flex-order: -2;
-            order: -2;
+    -ms-flex-order: -2;
+        order: -2;
+    -webkit-box-ordinal-group: -2;
     max-width: 50%;
     padding-bottom: 30px;
   }
@@ -4289,9 +4289,9 @@ button,
     padding: 16px 10px 6px 18px;
   }
   .programs__btn {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    -ms-flex-order: 1;
+        order: 1;
+    -webkit-box-ordinal-group: 1;
     max-width: 100%;
     margin-top: 30px;
     margin-right: 0;
@@ -4321,9 +4321,9 @@ button,
   }
   .programs__slider-navigation {
     margin: 0 0 0 auto;
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
+    -ms-flex-order: -1;
+        order: -1;
+    -webkit-box-ordinal-group: -1;
     max-width: 52px;
   }
   .programs__wrapper {
@@ -5893,6 +5893,8 @@ button,
   width: 100%;
   height: 500px;
   overflow: hidden;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 .contacts__map-container::before {
   position: absolute;

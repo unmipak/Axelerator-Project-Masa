@@ -212,6 +212,7 @@
 
   .programs h2 {
     order: -2;
+    -webkit-box-ordinal-group: -2;
     max-width: 50%;
     padding-bottom: 30px;
   }
@@ -224,6 +225,7 @@
 
   .programs__btn {
     order: 1;
+    -webkit-box-ordinal-group: 1;
     max-width: 100%;
     margin-top: 30px;
     margin-right: 0;
@@ -249,6 +251,7 @@
   .programs__slider-navigation {
     margin: 0 0 0 auto;
     order: -1;
+    -webkit-box-ordinal-group: -1;
     max-width: 52px;
   }
 
