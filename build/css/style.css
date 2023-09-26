@@ -4324,7 +4324,6 @@ button,
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
-    -webkit-order: -1;
     max-width: 52px;
   }
   .programs__wrapper {
@@ -5193,9 +5192,6 @@ button,
 .faq__item:hover, .faq__item:focus-within {
   background-color: #ffffff;
 }
-.faq__item:active {
-  background-color: #ffffff;
-}
 .faq__item dt {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5255,6 +5251,9 @@ button,
   }
 }
 
+.faq__item:active {
+  background-color: #ffffff;
+}
 .faq__item:active p {
   color: #275699;
 }
@@ -5890,9 +5889,9 @@ button,
 .contacts__map-container {
   margin: 34px auto 0;
   border-radius: 16px;
-  -webkit-border-radius: 16px;
   position: relative;
   width: 100%;
+  height: 500px;
   overflow: hidden;
 }
 .contacts__map-container::before {
@@ -5908,13 +5907,13 @@ button,
 
 .contacts__map {
   border-radius: 16px;
-  -webkit-border-radius: 16px;
   width: 100%;
   height: 500px;
   background-image: url("../img/map.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
+  overflow: hidden;
 }
 
 @media (max-width: 1439px) {
@@ -5984,6 +5983,9 @@ button,
   .contacts__item {
     width: 100%;
     max-width: none;
+  }
+  .contacts__map-container {
+    height: 240px;
   }
   .contacts__map {
     height: 240px;
