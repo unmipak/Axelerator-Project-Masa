@@ -12,9 +12,9 @@ const sliderHero = new Swiper('.hero', {
   hashNavigation: {
     watchState: true,
   },
-  autoplay: {
+  /*autoplay: {
     delay: 3000,
-  },
+  },*/
   pagination: {
     el: '.hero__pagination',
     clickable: true,

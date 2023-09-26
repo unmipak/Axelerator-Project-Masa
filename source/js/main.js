@@ -86,5 +86,7 @@ let modalBtnOpen = document.querySelector('[data-open-modal]');
 let modalNameInput = document.getElementById('name-modal');
 
 modalBtnOpen.addEventListener('click', function () {
-  modalNameInput.focus();
+  setTimeout(function () {
+    modalNameInput.focus();
+  }, 100);
 });

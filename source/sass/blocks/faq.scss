@@ -4,7 +4,7 @@
   h2 {
     @include text-h2;
     text-align: center;
-    padding-bottom: 66px;
+    padding-bottom: 64px;
   }
 }
 
@@ -23,6 +23,16 @@
 .faq__item {
   border: 1px solid $color-cerulean-blue;
   border-radius: 16px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-within {
+    background-color: $color-default-white;
+  }
+
+  &:active {
+    background-color: $color-default-white;
+  }
 
   dt {
     display: flex;
@@ -47,6 +57,16 @@
       padding-top: 10px;
       max-width: 80%;
     }
+  }
+}
+
+.faq__item:active {
+  p {
+    color: $color-endeavour;
+  }
+
+  .faq__btn {
+    background-color: $color-endeavour;
   }
 }
 
@@ -86,6 +106,14 @@
 
   &:disabled {
     background-color: $color-mischka;
+  }
+}
+
+.faq__item:hover {
+  .faq__btn {
+    border: 1px solid $color-cerulean-blue;
+    background-color: transparent;
+    background-image: url("../img/stack.svg#plus-blue");
   }
 }
 
@@ -144,7 +172,7 @@
   }
 
   .faq h2 {
-    padding-bottom: 40px;
+    padding-bottom: 37px;
   }
 
   .faq__item {

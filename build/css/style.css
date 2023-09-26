@@ -2521,6 +2521,13 @@ button,
   .modal__btn {
     width: 100%;
   }
+  .modal__btn-close {
+    width: 20px;
+    height: 20px;
+    background-size: 18px;
+    top: 18px;
+    right: 18px;
+  }
 }
 .custom-input {
   position: relative;
@@ -2543,28 +2550,23 @@ button,
   opacity: 0.8;
 }
 .custom-input input,
-.custom-input textarea,
-.custom-input select {
+.custom-input textarea {
   width: 100%;
   padding: 16px 20px;
-  border: 1px solid #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
   background: none;
   font-family: "Manrope Regular", "Arial", sans-serif;
   font-size: 14px;
   line-height: 14px;
   color: #f0efe9;
-  opacity: 0.3;
 }
 .custom-input input:hover, .custom-input input:focus-visible, .custom-input input:active,
 .custom-input textarea:hover,
 .custom-input textarea:focus-visible,
-.custom-input textarea:active,
-.custom-input select:hover,
-.custom-input select:focus-visible,
-.custom-input select:active {
+.custom-input textarea:active {
   outline: none;
-  opacity: 1;
+  border: 1px solid #ffffff;
 }
 .custom-input input:focus-visible + label,
 .custom-input textarea:focus-visible + label {
@@ -2644,30 +2646,24 @@ button,
 }
 .custom-input:hover label,
 .custom-input:hover input,
-.custom-input:hover textarea,
-.custom-input:hover select, .custom-input:focus-visible label,
+.custom-input:hover textarea, .custom-input:focus-visible label,
 .custom-input:focus-visible input,
-.custom-input:focus-visible textarea,
-.custom-input:focus-visible select, .custom-input:focus-within label,
+.custom-input:focus-visible textarea, .custom-input:focus-within label,
 .custom-input:focus-within input,
-.custom-input:focus-within textarea,
-.custom-input:focus-within select, .custom-input:active label,
+.custom-input:focus-within textarea, .custom-input:active label,
 .custom-input:active input,
-.custom-input:active textarea,
-.custom-input:active select {
+.custom-input:active textarea {
   opacity: 1;
 }
 .custom-input.is-invalid input,
 .custom-input.is-invalid textarea {
   border: 1px solid rgba(255, 94, 102, 0.7);
   background: rgba(255, 94, 102, 0.2);
-  opacity: 1;
 }
 .custom-input.is-invalid input:focus, .custom-input.is-invalid input:hover,
 .custom-input.is-invalid textarea:focus,
 .custom-input.is-invalid textarea:hover {
   border: 1px solid rgba(255, 94, 102, 0.7);
-  opacity: 1;
 }
 .custom-input.is-invalid input[type=checkbox] {
   opacity: 0;
@@ -2679,10 +2675,16 @@ button,
 }
 
 .custom-input--light input,
-.custom-input--light textarea,
-.custom-input--light select {
-  border: 1px solid #484848;
+.custom-input--light textarea {
+  border: 1px solid rgba(72, 72, 72, 0.3);
   color: #484848;
+}
+.custom-input--light input:hover, .custom-input--light input:focus-visible, .custom-input--light input:active,
+.custom-input--light textarea:hover,
+.custom-input--light textarea:focus-visible,
+.custom-input--light textarea:active {
+  outline: none;
+  border: 1px solid #484848;
 }
 .custom-input--light label {
   color: #484848;
@@ -3616,9 +3618,9 @@ button,
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-column-gap: 85px;
-     -moz-column-gap: 85px;
-          column-gap: 85px;
+  -webkit-column-gap: 80px;
+     -moz-column-gap: 80px;
+          column-gap: 80px;
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -4322,6 +4324,7 @@ button,
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+    -webkit-order: -1;
     max-width: 52px;
   }
   .programs__wrapper {
@@ -4333,7 +4336,7 @@ button,
 }
 .rules {
   background-color: #316dc2;
-  padding: 121px 85px 106px 100px;
+  padding: 121px 85px 109px 100px;
 }
 .rules h2 {
   font-family: "Manrope ExtraLight", "Arial", sans-serif;
@@ -4422,7 +4425,7 @@ button,
 }
 
 .rules__list {
-  margin: 52px 108px 0 20px;
+  margin: 56px 106px 0 20px;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4438,7 +4441,7 @@ button,
 
 .rules__item {
   position: relative;
-  padding: 25px 25px 20px;
+  padding: 24px 25px 20px;
   border: 1px solid #f0efe9;
   border-radius: 16px;
   width: 100%;
@@ -4551,7 +4554,7 @@ button,
   }
 }
 .news {
-  padding: 124px 85px 122px 100px;
+  padding: 124px 85px 124px 100px;
 }
 .news h2 {
   font-family: "Manrope ExtraLight", "Arial", sans-serif;
@@ -4561,7 +4564,7 @@ button,
   margin: 0;
   letter-spacing: 1px;
   text-align: center;
-  padding-bottom: 44px;
+  padding-bottom: 46px;
 }
 @media (max-width: 1199px) {
   .news h2 {
@@ -4583,7 +4586,7 @@ button,
 
 .news__btn {
   display: block;
-  padding: 14px 26px;
+  padding: 12px 26px;
   font-family: "Manrope Medium", "Arial", sans-serif;
   color: #316dc2;
   text-transform: uppercase;
@@ -4783,8 +4786,9 @@ button,
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  min-width: 204px;
-  padding: 10px 10px 0 0;
+  min-width: 214px;
+  min-height: 57px;
+  padding: 5px 14px 0 0;
   border-radius: 0 12px 0 0;
   position: relative;
   bottom: -0.5px;
@@ -4852,7 +4856,7 @@ button,
   line-height: 12px;
   letter-spacing: 0.12px;
   text-transform: uppercase;
-  padding: 12px 12px 0 0;
+  padding: 8px 12px 7px 0;
   border-radius: 0 12px 0 0;
   position: relative;
   bottom: -1.1px;
@@ -4895,9 +4899,9 @@ button,
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-column-gap: 16px;
      -moz-column-gap: 16px;
           column-gap: 16px;
@@ -4905,9 +4909,10 @@ button,
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 12px 18px 15px 0;
+  padding: 0 18px 10px 0;
   border-radius: 0 12px 0 0;
   position: relative;
+  min-height: 57px;
 }
 .news__link-wrapper::before {
   position: absolute;
@@ -4931,6 +4936,7 @@ button,
 
 .news__item--main h3 {
   max-width: 291px;
+  padding: 12px 22px 3px 0;
 }
 
 .news__link {
@@ -4943,6 +4949,7 @@ button,
   background-repeat: no-repeat;
   background-position: center;
   background-size: 8px;
+  margin-bottom: 4px;
 }
 .news__link:hover, .news__link:focus-visible {
   background-image: url("../img/stack.svg#arrow-blue");
@@ -4993,11 +5000,23 @@ button,
   }
   .news__item h3 {
     max-width: 207px;
-    padding: 10px 18px 0 0;
+    min-width: 191px;
+    min-height: 52px;
+    padding: 7px 18px 0 0;
     bottom: -0.7px;
   }
   .news__link-wrapper {
-    padding: 6px 18px 15px 0;
+    padding: 6px 18px 11px 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .news__link {
+    margin: 0;
+  }
+  .news__item--main h3 {
+    min-width: 0;
+    padding: 5px 10px 3px 0;
   }
   .news__item--main p {
     max-width: 176px;
@@ -5011,7 +5030,7 @@ button,
 }
 @media (max-width: 767px) {
   .news {
-    padding: 67px 15px;
+    padding: 67px 15px 68px;
   }
   .news h2 {
     padding-bottom: 24px;
@@ -5029,7 +5048,7 @@ button,
         -ms-flex-pack: start;
             justify-content: flex-start;
     overflow-x: scroll;
-    padding-bottom: 24px;
+    padding-bottom: 22px;
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
@@ -5044,8 +5063,9 @@ button,
     -webkit-column-gap: 10px;
        -moz-column-gap: 10px;
             column-gap: 10px;
-    padding: 12px 10px 12px 0;
+    padding: 12px 10px 10px 0;
     min-width: 263px;
+    min-height: 0;
   }
   .news__item--main p {
     max-width: 213px;
@@ -5119,7 +5139,7 @@ button,
 }
 @media (max-width: 767px) {
   .news__info span {
-    padding: 10px 13px 6px 0;
+    padding: 9px 13px 5px 0;
   }
 }
 .faq {
@@ -5133,7 +5153,7 @@ button,
   margin: 0;
   letter-spacing: 1px;
   text-align: center;
-  padding-bottom: 66px;
+  padding-bottom: 64px;
 }
 @media (max-width: 1199px) {
   .faq h2 {
@@ -5168,6 +5188,13 @@ button,
 .faq__item {
   border: 1px solid #316dc2;
   border-radius: 16px;
+  cursor: pointer;
+}
+.faq__item:hover, .faq__item:focus-within {
+  background-color: #ffffff;
+}
+.faq__item:active {
+  background-color: #ffffff;
 }
 .faq__item dt {
   display: -webkit-box;
@@ -5228,6 +5255,13 @@ button,
   }
 }
 
+.faq__item:active p {
+  color: #275699;
+}
+.faq__item:active .faq__btn {
+  background-color: #275699;
+}
+
 .faq__item-clickable-wrapper {
   padding: 40px;
 }
@@ -5259,6 +5293,12 @@ button,
 }
 .faq__btn:disabled {
   background-color: #a9afb7;
+}
+
+.faq__item:hover .faq__btn {
+  border: 1px solid #316dc2;
+  background-color: transparent;
+  background-image: url("../img/stack.svg#plus-blue");
 }
 
 .faq__item.is-active {
@@ -5334,7 +5374,7 @@ button,
     padding: 0 45px;
   }
   .faq h2 {
-    padding-bottom: 40px;
+    padding-bottom: 37px;
   }
   .faq__item {
     min-height: 100px;
@@ -5850,6 +5890,7 @@ button,
 .contacts__map-container {
   margin: 34px auto 0;
   border-radius: 16px;
+  -webkit-border-radius: 16px;
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -5867,6 +5908,7 @@ button,
 
 .contacts__map {
   border-radius: 16px;
+  -webkit-border-radius: 16px;
   width: 100%;
   height: 500px;
   background-image: url("../img/map.png");
@@ -6003,7 +6045,7 @@ button,
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .feedback__background-wrapper {
-    background-image: url("../img/feedback-desktop-@2x.jpg");
+    background-image: url("../img/feedback-desktop@2x.jpg");
   }
 }
 
@@ -6021,7 +6063,7 @@ button,
 .feedback__wrapper {
   background-color: #316dc2;
   border-radius: 16px;
-  padding: 84px 74px 50px;
+  padding: 83px 74px 49px;
   max-width: 498px;
 }
 
@@ -6049,7 +6091,7 @@ button,
 }
 @media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1199px) and (min-resolution: 2dppx) {
   .feedback__background-wrapper {
-    background-image: url("../img/feedback-tablet-@2x.jpg");
+    background-image: url("../img/feedback-tablet@2x.jpg");
   }
 }
 @media (max-width: 1199px) {
@@ -6388,6 +6430,9 @@ button,
   .footer__link {
     text-align: center;
     margin-top: 2px;
+  }
+  .footer__wrapper {
+    row-gap: 12px;
   }
   .footer__wrapper p {
     text-align: center;

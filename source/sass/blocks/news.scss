@@ -1,10 +1,10 @@
 .news {
-  padding: 124px 85px 122px 100px;
+  padding: 124px 85px 124px 100px;
 
   h2 {
     @include text-h2;
     text-align: center;
-    padding-bottom: 44px;
+    padding-bottom: 46px;
   }
 }
 
@@ -15,7 +15,7 @@
 
 .news__btn {
   display: block;
-  padding: 14px 26px;
+  padding: 12px 26px;
 
   font-family: $font-medium;
   color: $color-cerulean-blue;
@@ -121,8 +121,9 @@
     @include text-h5;
     background-color: $color-alabaster;
     width: fit-content;
-    min-width: 204px;
-    padding: 10px 10px 0 0;
+    min-width: 214px;
+    min-height: 57px;
+    padding: 5px 14px 0 0;
     border-radius: 0 12px 0 0;
     position: relative;
     bottom: -0.5px;
@@ -168,7 +169,7 @@
     line-height: 12px;
     letter-spacing: 0.12px;
     text-transform: uppercase;
-    padding: 12px 12px 0 0;
+    padding: 8px 12px 7px 0;
     border-radius: 0 12px 0 0;
     position: relative;
     bottom: -1.1px;
@@ -206,13 +207,14 @@
 .news__link-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   column-gap: 16px;
   background-color: $color-alabaster;
   width: fit-content;
-  padding: 12px 18px 15px 0;
+  padding: 0 18px 10px 0;
   border-radius: 0 12px 0 0;
   position: relative;
+  min-height: 57px;
 
   &::before {
     position: absolute;
@@ -235,6 +237,7 @@
 
 .news__item--main h3 {
   max-width: 291px;
+  padding: 12px 22px 3px 0;
 }
 
 .news__link {
@@ -247,6 +250,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 8px;
+  margin-bottom: 4px;
 
   &:hover,
   &:focus-visible {
@@ -303,12 +307,24 @@
 
   .news__item h3 {
     max-width: 207px;
-    padding: 10px 18px 0 0;
+    min-width: 191px;
+    min-height: 52px;
+    padding: 7px 18px 0 0;
     bottom: -0.7px;
   }
 
   .news__link-wrapper {
-    padding: 6px 18px 15px 0;
+    padding: 6px 18px 11px 0;
+    align-items: center;
+  }
+
+  .news__link {
+    margin: 0;
+  }
+
+  .news__item--main h3 {
+    min-width: 0;
+    padding: 5px 10px 3px 0;
   }
 
   .news__item--main p {
@@ -326,7 +342,7 @@
 
 @include vp-767 {
   .news {
-    padding: 67px 15px;
+    padding: 67px 15px 68px;
   }
 
   .news h2 {
@@ -344,7 +360,7 @@
     gap: 12px;
     justify-content: flex-start;
     overflow-x: scroll;
-    padding-bottom: 24px;
+    padding-bottom: 22px;
     -ms-overflow-style: none;
     scrollbar-width: none;
 
@@ -360,8 +376,9 @@
 
   .news__link-wrapper {
     column-gap: 10px;
-    padding: 12px 10px 12px 0;
+    padding: 12px 10px 10px 0;
     min-width: 263px;
+    min-height: 0;
   }
 
   .news__item--main p {
@@ -430,6 +447,6 @@
   }
 
   .news__info span {
-    padding: 10px 13px 6px 0;
+    padding: 9px 13px 5px 0;
   }
 }

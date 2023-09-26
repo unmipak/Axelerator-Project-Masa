@@ -15,24 +15,22 @@
   }
 
   input,
-  textarea,
-  select {
+  textarea {
     width: 100%;
     padding: 16px 20px;
-    border: 1px solid $color-default-white;
+    border: 1px solid rgba(255,255,255, 0.3);
     border-radius: 8px;
     background: none;
     font-family: $font-regular;
     font-size: 14px;
     line-height: 14px;
     color: $color-alabaster;
-    opacity: 0.3;
 
     &:hover,
     &:focus-visible,
     &:active {
       outline: none;
-      opacity: 1;
+      border: 1px solid $color-default-white;
     }
   }
 
@@ -122,8 +120,7 @@
 
     label,
     input,
-    textarea,
-    select {
+    textarea {
       opacity: 1;
     }
   }
@@ -133,12 +130,10 @@
     textarea {
       border: 1px solid $color-wild-watermelon;
       background: rgba(255, 94, 102, 0.2);
-      opacity: 1;
 
       &:focus,
       &:hover {
         border: 1px solid $color-wild-watermelon;
-        opacity: 1;
       }
     }
 
@@ -156,10 +151,16 @@
 
 .custom-input--light {
   input,
-  textarea,
-  select {
-    border: 1px solid $color-charcoal;
+  textarea {
+    border: 1px solid rgba(72, 72, 72, 0.3);
     color: $color-charcoal;
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      outline: none;
+      border: 1px solid $color-charcoal;
+    }
   }
 
   label {
