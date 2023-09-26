@@ -200,6 +200,7 @@ const setMap = () => {
     marker.setIcon(L.icon({
       iconUrl: ICON_URL,
       iconSize: getPinSize(),
+      shadowUrl: 'img/marker-shadow.png',
     }));
   };
 
