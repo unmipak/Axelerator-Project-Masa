@@ -9,6 +9,7 @@ const sliderHero = new Swiper('.hero', {
   loop: true,
   slidesPerView: 1,
   preventInteractionOnTransition: true,
+  simulateTouch: true,
   hashNavigation: {
     watchState: true,
   },
